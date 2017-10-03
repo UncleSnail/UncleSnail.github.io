@@ -1,0 +1,93 @@
+/* Main css for SENCAP */
+
+body {
+	background-color: #262d38;
+}
+
+h1 {
+	width: 50%;
+	min-width: 200px;
+	color: #dddddd;
+	text-align: center;
+	border-bottom: 2px solid #6f7582;
+	margin-bottom: 0;
+	margin-top: 10px;
+}
+
+#name {
+	display: inline-block;
+	padding-bottom: 0;
+}
+
+#top {
+	margin-bottom: 0;
+	/*top: 0;*/
+	width: 100%;
+}
+
+#main {
+	width: 100%;
+}
+
+#entries {
+	max-width: 750px;
+	text-align: center;
+	margin: auto;
+}
+
+.active {
+	color: #58819e;
+}
+
+.name {
+	text-align: center;
+	padding-bottom: 0;
+}
+
+.face {
+	display: block;
+	margin: 50px auto 25px;
+	width: 150px;
+	height: 149px;
+}
+
+p {
+	font-family: sans-serif;
+	text-align: center;
+	color: #dddddd;
+}
+
+.nav {
+	background-color: #262d38;
+	position: -webkit-sticky;/*for Safari*/
+	position: sticky;
+	top: -2;/*to avoid scroll issues*/
+	/*background-color: #6f7582;*/
+	list-style-type: none;
+	margin: 0 auto;
+	padding: 0;
+	padding-top: 7px;
+	text-align: center;
+}
+
+li {
+	display: inline;
+}
+
+li a {
+	display: inline-block;
+	padding: 10px;
+	padding-top: 0;
+	padding-bottom: 5px;
+	color: #dddddd;
+	text-decoration: none;
+}
+
+/*On hover*/
+a:hover {
+	color: #a2cfe5;
+}
+
+a {
+	color: #58819e;
+}
