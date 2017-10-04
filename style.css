@@ -5,104 +5,10 @@ body {
 	overflow-x: hidden;/*ensures no horizontal scrolling*/
 }
 
-.title {
-	width: 50%;
-	min-width: 200px;
-	color: #dddddd;
-	text-align: center;
-	border-bottom: 2px solid #6f7582;
-	margin: 10px auto 0 auto;
-	padding-bottom: 0;
-}
-
-#name {
-	display: inline-block;
-	padding-bottom: 0;
-}
-
-#top {
-	margin-bottom: 0;
-	/*top: 0;*/
-	width: 100%;
-}
-
-#main {
-	width: 100%;
-}
-
-.content {
-	max-width: 750px;
-	text-align: center;
-	margin: auto;
-}
-
-#moto {
-	font-family: "bedstead";
-	/*Center text vertically*/
-	display: table;
-	height: calc(100vh - 350px);
-	width: 100%;
-	font-size: 35pt;
-	color: #774954;
-}
-#moto h1 {
-	/*Center text vertically*/
-	display: table-cell;
-	vertical-align: middle;
-}
-#story {
-	margin: 75px auto 50px auto;
-}
-
-.active {
-	color: #58819e;
-}
-
-.face {
-	display: block;
-	margin: 50px auto 25px;
-	width: 150px;
-	height: 149px;
-}
-
 p {
 	font-family: sans-serif;
 	text-align: center;
 	color: #dddddd;
-}
-
-.entry p {
-	text-align: left;
-	color: #d8e3eb;
-}
-.entry h2 {
-	color: #dddddd;
-}
-
-.nav {
-	background-color: #262d38;
-	position: -webkit-sticky;/*for Safari*/
-	position: sticky;
-	top: -2;/*to avoid scroll issues*/
-	/*background-color: #6f7582;*/
-	list-style-type: none;
-	margin: 0 auto;
-	padding: 0;
-	padding-top: 7px;
-	text-align: center;
-}
-
-li {
-	display: inline;
-}
-
-li a {
-	display: inline-block;
-	padding: 10px;
-	padding-top: 0;
-	padding-bottom: 5px;
-	color: #dddddd;
-	text-decoration: none;
 }
 
 /*On hover*/
@@ -117,6 +23,97 @@ a {
 /*Removes the border on link click*/
 a:active, a:focus {
 	outline: 0;
+}
+
+/*Start heading style*/
+
+#top {
+	margin-bottom: 0;
+	width: 100%;
+}
+
+.face {
+	display: block;
+	margin: 50px auto 25px;
+	width: 150px;
+	height: 149px;
+}
+
+.title {
+	width: 50%;
+	min-width: 200px;
+	color: #dddddd;
+	text-align: center;
+	border-bottom: 2px solid #6f7582;
+	margin: 10px auto 0 auto;
+	padding-bottom: 0;
+}
+
+.nav {
+	background-color: #262d38;
+	position: -webkit-sticky;/*for Safari*/
+	position: sticky;
+	top: -2;/*to avoid scroll issues*/
+	list-style-type: none;
+	margin: 0 auto;
+	padding: 0;
+	padding-top: 7px;
+	text-align: center;
+}
+
+.active {
+	color: #58819e;
+}
+
+li {
+	display: inline;
+}
+
+li a {
+	display: inline-block;
+	padding: 0 10px 5px 10px;
+	color: #dddddd;
+	text-decoration: none;
+}
+
+/*Start main body styling*/
+
+#main {
+	width: 100%;
+	text-align: center;
+}
+
+.content {
+	max-width: 750px;
+	margin: auto;
+}
+
+#moto {
+	font-family: "bedstead";
+	/*Center text vertically*/
+	display: table;
+	height: calc(100vh - 350px);
+	width: 100%;
+	font-size: 35pt;
+	color: #774954;
+}
+
+#moto h1 {
+	/*Center text vertically*/
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#story {
+	margin: 75px auto 50px auto;
+}
+
+.entry p {
+	text-align: left;
+	color: #d8e3eb;
+}
+.entry h2 {
+	color: #dddddd;
 }
 
 /*handle small screens*/
