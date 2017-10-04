@@ -38,14 +38,20 @@ body {
 
 #moto {
 	font-family: "bedstead";
+	/*Center text vertically*/
+	display: table;
+	height: calc(100vh - 350px);
+	width: 100%;
 	font-size: 35pt;
-	text-align: center center;
 	color: #774954;
 }
 #moto h1 {
 	/*Center text vertically*/
+	display: table-cell;
 	vertical-align: middle;
-	line-height: calc(100vh - 450px);
+}
+#story {
+	margin: 75px auto 50px auto;
 }
 
 .active {
@@ -120,9 +126,9 @@ a:active, a:focus {
 		font-size: 6vw;/*~90% of viewport width*/
 	}
 }
-@media screen and (max-height: 450px) {
+@media screen and (max-height: 350px) {
 	#moto h1 {
 		vertical-align: middle;
-		line-height: 0;
+		height: 350;
 	}
 }
