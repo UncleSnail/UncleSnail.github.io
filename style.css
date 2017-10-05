@@ -111,7 +111,7 @@ li a {
 
 #story {
 	display: table;
-	height: calc(100vh - 50px);/*minus pixels for the up arrow*/
+	height: calc(100vh - 60px);/*minus pixels for the up arrow*/
 	max-width: 750px;
 	margin: auto;
 }
