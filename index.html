@@ -6,6 +6,21 @@
     	<meta charset="utf-8">
         <title>Home</title>
 
+        <script>
+          toTop = function () {
+            window.scroll({
+              top: 0,
+              left: 0,
+              behavior: 'smooth'
+            });
+          };
+          toNext = function (next) {
+            document.querySelector(next).scrollIntoView({
+              behavior: 'smooth'
+            });
+          };
+        </script>
+
         <link type="text/css" rel="stylesheet" href="style.css">
         <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/bedstead" type="text/css"/>
     </head>
@@ -27,7 +42,7 @@
             <div id="moto">
   	        	<h1>&lt;code&gt;<span class="highlight">Logically</span>&lt;/code&gt;</h1>
             </div>
-            <a href="#story" title="To my story"><img src="images/down_arrow_small.png" alt="Down arrow" class="arrow" width="50" height="50"></a>
+            <a onclick="toNext('#story')" title="To my story"><img src="images/down_arrow_small.png" alt="Down arrow" class="arrow" width="50" height="50"></a>
             <div id="story">
                 <p>
                   After moving to Nebraska to <span class="highlight">focus</span> on my education, I heard about The Career Academy.<br>
@@ -35,7 +50,7 @@
                   Since I was eight I have <span class="highlight">loved programming,</span> and am eager to get started on some more long term projects. I am enthusiastic and bring my <span class="highlight">positive attitude</span> and quality work ethic to any job in which I participate.
                 </p>
             </div>
-            <a href="#top" title="To the top"><img src="images/up_arrow_small.png" alt="Up arrow" class="arrow" width="50" height="50"></a>
+            <a onclick="toTop()" title="To the top"><img src="images/up_arrow_small.png" alt="Up arrow" class="arrow" width="50" height="50"></a>
         </div>
       </div>
     </body>
