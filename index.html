@@ -22,11 +22,10 @@
         </script>
 
         <link type="text/css" rel="stylesheet" href="style.css">
-        <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/bedstead" type="text/css"/>
     </head>
     <body>
     	<div id="top">
-  			<img src="images/face_small.png" alt="A picture of me" class="face" width="150" height="149">
+  			<img src="images/face_small.png" alt="A picture of me" class="face" style="width:150; height:149;">
         <h1 class="title">Caleb Marcoux</h1>
       </div>
 
@@ -42,7 +41,8 @@
             <div id="moto">
   	        	<h1>&lt;code&gt;<span class="highlight">Logically</span>&lt;/code&gt;</h1>
             </div>
-            <a onclick="toNext('#story')" title="To my story"><img src="images/down_arrow_small.png" alt="Down arrow" class="arrow" width="50" height="50"></a>
+            <!-- border:0 stops old browsers from adding borders, width and height in style tag to stop external sheets from accidentally sizing. -->
+            <a onclick="toNext('#story')" title="To my story"><img src="images/down_arrow_small.png" alt="Down arrow" class="arrow" style="width:50px; height:50px; border:0;"></a>
             <div id="story">
                 <p>
                   After moving to Nebraska to <span class="highlight">focus</span> on my education, I heard about The Career Academy.<br>
@@ -50,7 +50,7 @@
                   Since I was eight I have <span class="highlight">loved programming,</span> and am eager to get started on some more long term projects. I am enthusiastic and bring my <span class="highlight">positive attitude</span> and quality work ethic to any job in which I participate.
                 </p>
             </div>
-            <a onclick="toTop()" title="To the top"><img src="images/up_arrow_small.png" alt="Up arrow" class="arrow" width="50" height="50"></a>
+            <a onclick="toTop()" title="To the top"><img src="images/up_arrow_small.png" alt="Up arrow" class="arrow" style="width:50px; height:50px; border:0;"></a>
         </div>
       </div>
     </body>

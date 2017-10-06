@@ -16,6 +16,11 @@ p {
 	color: #9faf56;
 }
 
+@font-face {
+	font-family: bedstead;
+	src : url(fonts/bedstead-ultracondensed.otf);
+}
+
 /*On hover*/
 a:hover {
 	color: #a2cfe5;
