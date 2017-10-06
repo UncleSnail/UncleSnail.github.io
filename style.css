@@ -131,6 +131,7 @@ li a {
 .arrow:hover {
 	opacity: 1;
 	filter: alpha(opacity = 100);/*For old browsers*/
+	cursor: pointer;
 }
 
 .entry p {
