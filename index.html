@@ -6,21 +6,7 @@
     	<meta charset="utf-8">
         <title>Home</title>
 
-        <script>
-          toTop = function () {
-            window.scroll({
-              top: 0,
-              left: 0,
-              behavior: 'smooth'
-            });
-          };
-          toNext = function (next) {
-            document.querySelector(next).scrollIntoView({
-              behavior: 'smooth'
-            });
-          };
-        </script>
-
+        <script src="script.js"></script>
         <link type="text/css" rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -38,17 +24,21 @@
 
       <div id="main">
       	<div class="content">
-            <div id="moto">
-  	        	<h1>&lt;code&gt;<span class="highlight">Logically</span>&lt;/code&gt;</h1>
+            <div class="landing">
+  	        	<div>
+                <h1>&lt;code&gt;<span class="highlight">Logically</span>&lt;/code&gt;</h1>
+              </div>
             </div>
             <!-- border:0 stops old browsers from adding borders, width and height in style tag to stop external sheets from accidentally sizing. -->
-            <a onclick="toNext('#story')" title="To my story"><img src="images/down_arrow_small.png" alt="Down arrow" class="arrow" style="width:50px; height:50px; border:0;"></a>
-            <div id="story">
+            <a onclick="toNext('.page')" title="To my story"><img src="images/down_arrow_small.png" alt="Down arrow" class="arrow" style="width:50px; height:50px; border:0;"></a>
+            <div class="page">
+              <div>
                 <p>
                   After moving to Nebraska to <span class="highlight">focus</span> on my education, I heard about The Career Academy.<br>
                   As a home-school student I overcame many hurdles to sign up, but I persevered them and am doing exceptionally with an unweighted college <span class="highlight">GPA of 4.0.</span><br>
                   Since I was eight I have <span class="highlight">loved programming,</span> and am eager to get started on some more long term projects. I am enthusiastic and bring my <span class="highlight">positive attitude</span> and quality work ethic to any job in which I participate.
                 </p>
+              </div>
             </div>
             <a onclick="toTop()" title="To the top"><img src="images/up_arrow_small.png" alt="Up arrow" class="arrow" style="width:50px; height:50px; border:0;"></a>
         </div>

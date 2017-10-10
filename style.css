@@ -94,11 +94,12 @@ li a {
 }
 
 .content {
-	max-width: 750px;
-	margin: auto;
+	width: 100%;
 }
 
-#moto {
+.landing {
+	max-width: 100%;
+	margin: auto;
 	font-family: "bedstead";
 	/*Center text vertically*/
 	display: table;
@@ -108,20 +109,25 @@ li a {
 	color: #774954;
 }
 
-#moto h1 {
+.landing > div {
 	/*Center text vertically*/
 	display: table-cell;
 	vertical-align: middle;
 }
 
-#story {
+.landing > div * {
+	display:inline;
+}
+
+.page {
 	display: table;
-	height: calc(100vh - 60px);/*minus pixels for the up arrow*/
 	max-width: 750px;
+	height: calc(100vh - 60px);/*minus pixels for the up arrow*/
+	width: 100%;
 	margin: auto;
 }
 
-#story p {
+.page > div {
 	font-size: 15pt;
 	display: table-cell;
 	vertical-align: middle;
@@ -142,6 +148,7 @@ li a {
 .entry p {
 	text-align: left;
 	color: #d8e3eb;
+	font-size: 15pt;
 }
 .entry h2 {
 	color: #dddddd;
@@ -149,13 +156,13 @@ li a {
 
 /*handle small screens*/
 @media screen and (max-width: 750px) {
-	#moto {
+	.landing {
 		font-size: 15pt;/*backup incase vw has issues*/
 		font-size: 6vw;/*~90% of viewport width*/
 	}
 }
 @media screen and (max-height: 350px) {
-	#moto h1 {
+	.landing h1 {
 		vertical-align: middle;
 		height: 350;
 	}
