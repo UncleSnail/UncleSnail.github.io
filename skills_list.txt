@@ -1,0 +1,36 @@
+Flowcharts
+Pseudocode
+Java
+
+Web -
+  HTML
+  CSS
+  JS
+
+Object Oriented
+Programming statements -
+  functions (methods)
+  loops
+  if statements
+  classes
+  enumerations
+  interfaces
+
+Git and github
+
+basic SQL
+basic Python
+Basic Ruby on Rails
+
+Godot and GDScript
+
+~Art~
+Blender
+Gimp
+Krita
+
+Websites-
+Khan Academy
+~ ~ Codepen
+Code Academy
+Git hub
