@@ -20,6 +20,10 @@ p {
 	font-family: bedstead;
 	src : url(fonts/bedstead-ultracondensed.otf);
 }
+@font-face {
+	font-family: bedstead-extended;
+	src : url(fonts/bedstead.otf);
+}
 
 /*On hover*/
 a:hover {
@@ -117,6 +121,14 @@ li a {
 
 .landing > div * {
 	display:inline;
+}
+
+.tea h1 {
+	font-size: 75pt;
+	font-family: "bedstead-extended";
+	color: #ffffff;
+	position: relative;
+	top: -60px;
 }
 
 .page {
