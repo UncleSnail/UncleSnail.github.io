@@ -79,11 +79,11 @@ a:active, a:focus {
 	color: #58819e;
 }
 
-li {
+ul li {
 	display: inline;
 }
 
-li a {
+ul li a {
 	display: inline-block;
 	padding: 0 10px 5px 10px;
 	color: #dddddd;
@@ -158,12 +158,13 @@ li a {
 	cursor: pointer;
 }
 
-.entry p {
+.entry {
 	text-align: left;
 	color: #d8e3eb;
 	font-size: 15pt;
 }
 .entry h2 {
+	font-size: 20pt;
 	color: #dddddd;
 }
 
