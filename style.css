@@ -163,9 +163,25 @@ ul li a {
 	color: #d8e3eb;
 	font-size: 15pt;
 }
+
 .entry h2 {
 	font-size: 20pt;
 	color: #dddddd;
+}
+
+.thumbnail {
+	display: block;
+	border: 2px solid #6f7582;
+	padding: 10px;
+	margin: 10px;
+	text-align: left;
+	background-color: #58819e;
+}
+
+.thumbnail * {
+	display: inline-block;
+	color: #d8e3eb;
+	vertical-align: middle;
 }
 
 /*handle small screens*/
