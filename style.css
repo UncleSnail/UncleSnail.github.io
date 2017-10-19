@@ -110,7 +110,7 @@ ul li a {
 .landing {
 	max-width: 100%;
 	margin: auto;
-	font-family: "bedstead";
+	font-family: "bedstead", monospace;
 	/*Center text vertically*/
 	display: table;
 	height: calc(100vh - 350px);
@@ -131,7 +131,7 @@ ul li a {
 
 .tea h1 {
 	font-size: 75pt;
-	font-family: "bedstead-extended";
+	font-family: "bedstead-extended", monospace;
 	color: #ffffff;
 	position: relative;
 	top: -60px;
