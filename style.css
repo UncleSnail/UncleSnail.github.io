@@ -8,8 +8,8 @@ body {
 
 p {
 	font-family: sans-serif;
-	text-align: center;
 	color: #dddddd;
+	text-indent: 3em;
 }
 
 h3 {
@@ -43,11 +43,13 @@ a:hover {
 
 a {
 	color: #58819e;
+	text-decoration: none;
 }
 
 /*Removes the border on link click*/
 a:active, a:focus {
 	outline: 0;
+	text-decoration: none;
 }
 
 /*Start heading style*/
@@ -172,7 +174,9 @@ ul li a {
 .entry {
 	text-align: left;
 	color: #d8e3eb;
-	font-size: 15pt;
+	font-size: 12pt;
+	font-family: sans-serif;
+	text-align: left;
 }
 
 .entry h2 {
@@ -182,17 +186,22 @@ ul li a {
 
 .thumbnail {
 	display: block;
-	border: 2px solid #6f7582;
+	border: 2px dashed #6f7582;
+	border-radius: 5px;
 	padding: 10px;
 	margin: 10px;
 	text-align: left;
-	background-color: #58819e;
+}
+
+.thumbnail:hover {
+	border: 2px solid #8899aa;
 }
 
 .thumbnail * {
 	display: inline-block;
 	color: #d8e3eb;
 	vertical-align: middle;
+	text-indent: 0;
 }
 
 /*handle small screens*/
