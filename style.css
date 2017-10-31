@@ -22,11 +22,17 @@ h3 {
 
 @font-face {
 	font-family: bedstead;
-	src : url(fonts/bedstead-ultracondensed.otf);
+	src : url(fonts/bedstead-ultracondensed.otf),
+		url(fonts/bedstead-ultracondensed.pfa),
+		url(fonts/bedstead-ultracondensed.afm),
+		url(fonts/bedstead-ultracondensed.sfd);
 }
 @font-face {
 	font-family: bedstead-extended;
-	src : url(fonts/bedstead.otf);
+	src : url(fonts/bedstead.otf),
+		url(fonts/bedstead.pfa),
+		url(fonts/bedstead.afm),
+		url(fonts/bedstead.sfd);
 }
 
 /*On hover*/
