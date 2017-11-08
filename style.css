@@ -12,6 +12,10 @@ p {
 	text-indent: 3em;
 }
 
+h2 {
+	color: #dddddd;
+}
+
 h3 {
 	text-align: center;
 }
@@ -76,13 +80,21 @@ a:active, a:focus {
 	padding-bottom: 0;
 }
 
-.nav {
+#nav {
 	background-color: #262d38;
-	position: -webkit-sticky;/*for Safari*/
-	position: sticky;
-	top: -2;/*to avoid scroll issues*/
+	/*position: -webkit-sticky;/*for Safari*/
+	/*position: sticky;*/
+	position: relative; /*so z-index works*/
+	height: 30px;
+	margin-bottom: -30px;/*so it doesn't move page when scrolled*/
+	top: 0;
+	/*width: 100%;*/
+	z-index: 1;
+}
+
+#nav > ul {
 	list-style-type: none;
-	margin: 0 auto;
+	margin: auto;
 	padding: 0;
 	padding-top: 7px;
 	text-align: center;
@@ -120,7 +132,7 @@ ul li a {
 	font-family: "bedstead", monospace;
 	/*Center text vertically*/
 	display: table;
-	height: calc(100vh - 350px);
+	height: calc(100vh - 320px);
 	width: 100%;
 	font-size: 35pt;
 	color: #774954;
@@ -167,14 +179,18 @@ ul li a {
 
 .column-right {
 	text-align: left;
+	padding-left: 25px;
 }
 
 .column-left {
 	text-align: right;
+	padding-right: 25px;
+	border-right: 2px dashed #6f7582;
 }
 
 .center {
 	max-width: 750px;
+	margin: auto;
 }
 
 .columns {
@@ -194,6 +210,7 @@ ul li a {
 }
 
 .entry {
+	margin-top: 50px;
 	text-align: left;
 	color: #d8e3eb;
 	font-size: 12pt;
