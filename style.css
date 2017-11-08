@@ -111,7 +111,6 @@ ul li a {
 }
 
 .content {
-	max-width: 750px;
 	margin: auto;
 }
 
@@ -147,9 +146,8 @@ ul li a {
 
 .page {
 	display: table;
-	max-width: 750px;
-	height: calc(100vh - 60px);/*minus pixels for the up arrow*/
-	width: 100%;
+	height: calc(100vh - 100px);/*minus pixels for the up arrow screen overlap*/
+	width: 90%;
 	margin: auto;
 }
 
@@ -157,6 +155,30 @@ ul li a {
 	font-size: 15pt;
 	display: table-cell;
 	vertical-align: middle;
+}
+
+.page .column-large {
+	width: 60%;
+}
+
+.page .column-small {
+	width: 40%;
+}
+
+.column-right {
+	text-align: left;
+}
+
+.column-left {
+	text-align: right;
+}
+
+.center {
+	max-width: 750px;
+}
+
+.columns {
+	max-width: 1000px;
 }
 
 .arrow {
