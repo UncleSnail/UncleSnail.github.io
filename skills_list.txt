@@ -12,6 +12,8 @@ Link website - What I learned: There are often systems already in place that one
 Database - What I learned: sometimes projects are harder than expected, and it can be difficult to put in the last steps to completion, and conform to client needs.
 ~ ~ Need one more?!
 
+
+
 Object Oriented
 Programming statements -
   functions (methods)
@@ -46,9 +48,13 @@ Job shadows:
 Hudl
 Sandhills Publishing
 Assurity
+Brian Health
+Spreetail
 
 Field Trips:
 Centrix Solutions
 State of Nebraska
 Assurity
 Duncan Aviation
+Spreetail
+Firesprings
