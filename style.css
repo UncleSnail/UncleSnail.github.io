@@ -100,10 +100,6 @@ a:active, a:focus {
 	text-align: center;
 }
 
-.active {
-	color: #58819e;
-}
-
 #nav > ul li {
 	display: inline;
 }
@@ -113,6 +109,20 @@ a:active, a:focus {
 	padding: 0 10px 5px;
 	color: #dddddd;
 	text-decoration: none;
+}
+
+/*To make the inheritance not break nav bar.*/
+#nav > ul li a:hover {
+	color: #a2cfe5;
+	cursor: pointer;
+}
+#nav > ul li a.active {
+	color: #a2cfe5;
+	cursor: pointer;
+}
+
+.active {
+	color: #58819e;
 }
 
 /*Start main body styling*/
