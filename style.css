@@ -104,11 +104,11 @@ a:active, a:focus {
 	color: #58819e;
 }
 
-ul li {
+#nav > ul li {
 	display: inline;
 }
 
-ul li a {
+#nav > ul li a {
 	display: inline-block;
 	padding: 0 10px 5px;
 	color: #dddddd;
@@ -241,6 +241,10 @@ ul li a {
 	color: #d8e3eb;
 	vertical-align: middle;
 	text-indent: 0;
+}
+
+.thumbnail p {
+	font-size: 50%;
 }
 
 /*handle small screens*/
