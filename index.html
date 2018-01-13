@@ -1,56 +1,74 @@
 <!doctype html>
-<html>
+<html lang="en-us">
     <!-- Created by Caleb Marcoux (Uncle Snail) -->
     <!-- I solute you, my fellow programmer. -->
     <head>
     	<meta charset="utf-8">
-        <title>Home</title>
+      <title>Caleb Marcoux - Home</title>
 
-        <script>
-          toTop = function () {
-            window.scroll({
-              top: 0,
-              left: 0,
-              behavior: 'smooth'
-            });
-          };
-          toNext = function (next) {
-            document.querySelector(next).scrollIntoView({
-              behavior: 'smooth'
-            });
-          };
-        </script>
-
-        <link type="text/css" rel="stylesheet" href="style.css">
-        <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/bedstead" type="text/css"/>
+      <script src="script.js"></script>
+      <link type="text/css" rel="stylesheet" href="style.css">
     </head>
     <body>
     	<div id="top">
-  			<img src="images/face_small.png" alt="A picture of me" class="face" width="150" height="149">
+  			<img src="images/face_small.png" alt="A picture of me" class="face" style="width:150; height:149;">
         <h1 class="title">Caleb Marcoux</h1>
       </div>
 
-      <ul class="nav">
-      	<li><a href="#top" title="Top of page" class="active">Home</a></li>
-      	<li><a href="pages/blog.html" title="My blog">Blog</a></li>
-      	<!--<li><a href="pages/blog.html" title="About me">About</a></li>-->
-      	<!--<li><a href="pages/blog.html" title="My skills">Skills</a></li>-->
-      </ul>
+      <div id="nav">
+        <ul>
+        	<li><a onclick="toTop()" title="Top of page" class="active">Home</a></li>
+        	<li><a href="pages/blog.html" title="My blog">Blog</a></li>
+          <li><a href="pages/resume.html" title="My resume">Resume</a></li>
+        	<!--<li><a href="pages/blog.html" title="About me">About</a></li>-->
+        	<!--<li><a href="pages/blog.html" title="My skills">Skills</a></li>-->
+        </ul>
+      </div>
 
       <div id="main">
+        <div class="landing">
+          <div>
+            <h1>&lt;code&gt;<span class="highlight">Logically</span>&lt;/code&gt;</h1>
+          </div>
+        </div>
       	<div class="content">
-            <div id="moto">
-  	        	<h1>&lt;code&gt;<span class="highlight">Logically</span>&lt;/code&gt;</h1>
+          <!-- border:0 stops old browsers from adding borders, width and height in style tag to stop external sheets from accidentally sizing. -->
+          <a onclick="toNext('.page')" title="To my story"><img src="images/down_arrow_small.png" alt="Down arrow" class="arrow" style="width:50px; height:50px; border:0;"></a>
+          <div class="page center">
+            <div>
+              <p>
+                After moving to Nebraska to <span class="highlight">focus</span> on my education, I heard about The Career Academy.<br>
+                As a home-school student I overcame many hurdles to sign up, but I persevered them and am doing exceptionally with an unweighted college <span class="highlight">GPA of 4.0.</span><br>
+                Since I was eight I have <span class="highlight">loved programming,</span> and am eager to get started on some more long term projects. I am enthusiastic and bring my <span class="highlight">positive attitude</span> and quality work ethic to any job in which I participate.
+              </p>
             </div>
-            <a onclick="toNext('#story')" title="To my story"><img src="images/down_arrow_small.png" alt="Down arrow" class="arrow" width="50" height="50"></a>
-            <div id="story">
-                <p>
-                  After moving to Nebraska to <span class="highlight">focus</span> on my education, I heard about The Career Academy.<br>
-                  As a home-school student I overcame many hurdles to sign up, but I persevered them and am doing exceptionally with an unweighted college <span class="highlight">GPA of 4.0.</span><br>
-                  Since I was eight I have <span class="highlight">loved programming,</span> and am eager to get started on some more long term projects. I am enthusiastic and bring my <span class="highlight">positive attitude</span> and quality work ethic to any job in which I participate.
-                </p>
+          </div>
+          <div class="page columns">
+            <div class="column-small column-left">
+              <h2>
+                I love open source projects,
+                and my hobbies are mostly focused
+                around awesome software like
+                <a href="https://www.blender.org/" title="Visit the Blender website." target="_blank">Blender</a>,
+                <a href="https://krita.org/en/" title="Visit the Krita website." target="_blank">Krita</a>, and
+                <a href="https://godotengine.org/" title="Visit the Godot website." target="_blank">Godot</a>.
+              </h2>
             </div>
-            <a onclick="toTop()" title="To the top"><img src="images/up_arrow_small.png" alt="Up arrow" class="arrow" width="50" height="50"></a>
+            <div class="column-large column-right">
+              <a class="twitter-timeline"
+                data-lang="en"
+                data-theme="dark"
+                data-link-color="#58819e"
+                height="500"
+                data-chrome="transparent"
+                href="https://twitter.com/Uncle_Snail/lists/open-source?ref_src=twsrc%5Etfw">
+                A Twitter List by Uncle_Snail
+              </a>
+              <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+          </div>
+
+          <a onclick="toTop()" title="To the top"><img src="images/up_arrow_small.png" alt="Up arrow" class="arrow" style="width:50px; height:50px; border:0;"></a>
         </div>
       </div>
     </body>

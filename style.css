@@ -1,6 +1,11 @@
 /* Created by Caleb Marcoux (Uncle Snail) */
 /* I solute you, my fellow programmer. */
 
+/*Easy fix*/
+embed {
+	margin: auto;
+}
+
 body {
 	background-color: #262d38;
 	overflow-x: hidden;/*ensures no horizontal scrolling*/
@@ -8,26 +13,52 @@ body {
 
 p {
 	font-family: sans-serif;
-	text-align: center;
 	color: #dddddd;
+	text-indent: 3em;
+}
+
+h2 {
+	color: #dddddd;
+}
+
+h3 {
+	text-align: center;
 }
 
 .highlight {
 	color: #9faf56;
 }
 
+@font-face {
+	font-family: bedstead;
+	src : url(fonts/bedstead-ultracondensed.otf),
+		url(fonts/bedstead-ultracondensed.pfa),
+		url(fonts/bedstead-ultracondensed.afm),
+		url(fonts/bedstead-ultracondensed.sfd);
+}
+@font-face {
+	font-family: bedstead-extended;
+	src : url(fonts/bedstead.otf),
+		url(fonts/bedstead.pfa),
+		url(fonts/bedstead.afm),
+		url(fonts/bedstead.sfd);
+}
+
 /*On hover*/
 a:hover {
 	color: #a2cfe5;
+	cursor: pointer;
 }
 
 a {
 	color: #58819e;
+	text-decoration: none;
 }
 
 /*Removes the border on link click*/
 a:active, a:focus {
 	outline: 0;
+	text-decoration: none;
 }
 
 /*Start heading style*/
@@ -50,35 +81,53 @@ a:active, a:focus {
 	color: #dddddd;
 	text-align: center;
 	border-bottom: 2px solid #6f7582;
-	margin: 10px auto 0 auto;
+	margin: 10px auto 0;
 	padding-bottom: 0;
 }
 
-.nav {
+#nav {
 	background-color: #262d38;
-	position: -webkit-sticky;/*for Safari*/
-	position: sticky;
-	top: -2;/*to avoid scroll issues*/
+	/*position: -webkit-sticky;/*for Safari*/
+	/*position: sticky;*/
+	position: relative; /*so z-index works*/
+	height: 30px;
+	margin-bottom: -30px;/*so it doesn't move page when scrolled*/
+	top: 0;
+	/*width: 100%;*/
+	z-index: 1;
+}
+
+#nav > ul {
 	list-style-type: none;
-	margin: 0 auto;
+	margin: auto;
 	padding: 0;
 	padding-top: 7px;
 	text-align: center;
 }
 
-.active {
-	color: #58819e;
-}
-
-li {
+#nav > ul li {
 	display: inline;
 }
 
-li a {
+#nav > ul li a {
 	display: inline-block;
-	padding: 0 10px 5px 10px;
+	padding: 0 10px 5px;
 	color: #dddddd;
 	text-decoration: none;
+}
+
+/*To make the inheritance not break nav bar.*/
+#nav > ul li a:hover {
+	color: #a2cfe5;
+	cursor: pointer;
+}
+#nav > ul li a.active {
+	color: #a2cfe5;
+	cursor: pointer;
+}
+
+.active {
+	color: #58819e;
 }
 
 /*Start main body styling*/
@@ -89,37 +138,78 @@ li a {
 }
 
 .content {
-	max-width: 750px;
 	margin: auto;
 }
 
-#moto {
-	font-family: "bedstead";
+.landing {
+	max-width: 100%;
+	margin: auto;
+	font-family: "bedstead", monospace;
 	/*Center text vertically*/
 	display: table;
-	height: calc(100vh - 350px);
+	height: calc(100vh - 320px);
 	width: 100%;
 	font-size: 35pt;
 	color: #774954;
 }
 
-#moto h1 {
+.landing > div {
 	/*Center text vertically*/
 	display: table-cell;
 	vertical-align: middle;
 }
 
-#story {
+.landing > div * {
+	display:inline;
+}
+
+.tea h1 {
+	font-size: 75pt;
+	font-family: "bedstead-extended", monospace;
+	color: #ffffff;
+	position: relative;
+	top: -60px;
+}
+
+.page {
 	display: table;
-	height: calc(100vh - 60px);/*minus pixels for the up arrow*/
+	height: calc(100vh - 100px);/*minus pixels for the up arrow screen overlap*/
+	width: 90%;
+	margin: auto;
+}
+
+.page > div {
+	font-size: 15pt;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.page .column-large {
+	width: 60%;
+}
+
+.page .column-small {
+	width: 40%;
+}
+
+.column-right {
+	text-align: left;
+	padding-left: 25px;
+}
+
+.column-left {
+	text-align: right;
+	padding-right: 25px;
+	border-right: 2px dashed #6f7582;
+}
+
+.center {
 	max-width: 750px;
 	margin: auto;
 }
 
-#story p {
-	font-size: 15pt;
-	display: table-cell;
-	vertical-align: middle;
+.columns {
+	max-width: 1000px;
 }
 
 .arrow {
@@ -134,23 +224,53 @@ li a {
 	cursor: pointer;
 }
 
-.entry p {
+.entry {
+	margin-top: 50px;
 	text-align: left;
 	color: #d8e3eb;
+	font-size: 12pt;
+	font-family: sans-serif;
+	text-align: left;
 }
+
 .entry h2 {
+	font-size: 20pt;
 	color: #dddddd;
+}
+
+.thumbnail {
+	display: block;
+	border: 2px dashed #6f7582;
+	border-radius: 5px;
+	padding: 10px;
+	margin: 10px;
+	text-align: left;
+}
+
+.thumbnail:hover {
+	border: 2px solid #8899aa;
+}
+
+.thumbnail * {
+	display: inline-block;
+	color: #d8e3eb;
+	vertical-align: middle;
+	text-indent: 0;
+}
+
+.thumbnail p {
+	font-size: 50%;
 }
 
 /*handle small screens*/
 @media screen and (max-width: 750px) {
-	#moto {
+	.landing {
 		font-size: 15pt;/*backup incase vw has issues*/
 		font-size: 6vw;/*~90% of viewport width*/
 	}
 }
 @media screen and (max-height: 350px) {
-	#moto h1 {
+	.landing h1 {
 		vertical-align: middle;
 		height: 350;
 	}
