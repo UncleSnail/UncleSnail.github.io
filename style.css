@@ -1,6 +1,11 @@
 /* Created by Caleb Marcoux (Uncle Snail) */
 /* I solute you, my fellow programmer. */
 
+/*Easy fix*/
+embed {
+	margin: auto;
+}
+
 body {
 	background-color: #262d38;
 	overflow-x: hidden;/*ensures no horizontal scrolling*/
