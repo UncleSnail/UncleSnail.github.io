@@ -238,6 +238,20 @@ a:active, a:focus {
 	color: #dddddd;
 }
 
+.blog-hover {
+	background-color: #4461;
+	border: 2px dashed #6f758211;
+	border-radius: 10px;
+	border-top: 2px solid #6f758201;
+}
+
+.blog-hover:hover {
+	background-color: #4452;
+	border: 2px dashed #6f758266;
+	border-radius: 10px;
+	border-top: 2px solid #6f758266;
+}
+
 .thumbnail {
 	display: block;
 	border: 2px dashed #6f7582;
