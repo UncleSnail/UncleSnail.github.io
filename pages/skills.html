@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en-us">
+    <!-- Skills. Published 02/14/2018 -->
+    <!-- Created by Caleb Marcoux (Uncle Snail) -->
+    <!-- I solute you, my fellow programmer. -->
+    <head>
+    	<meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Skills - Caleb Marcoux</title>
+      <base href="../index.html">
+      <script src="script.js"></script>
+      <link type="text/css" rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+    	<div id="top">
+	    	<div class="name">
+            <img src="images/posts/strengths.png" class="face" alt="Checkmark" style="width:100px; height:100px;">
+	        	<h1 class="title">Skills</h1>
+	    	</div>
+      </div>
+
+      <div id="nav">
+        <ul>
+        	<li><a href="index.html" title="Home page">Home</a></li>
+        	<li><a href="pages/blog.html" title="My blog">Blog</a></li>
+          <li><a href="resume.html" title="My resume">Resume</a></li>
+        	<li><a onclick="toTop()" title="My skills"  class="active">Skills</a></li>
+        	<!--<li><a href="skills.html" title="My skills">Skills</a></li>-->
+        </ul>
+      </div>
+
+      <div id="main">
+      	<div class="content">
+          <div class="entry">
+            <h3>
+              Programming
+            </h3>
+            <p class="center">
+              I have been programming since I was 9 years old, and have created many interesting things. During that time, I was using the pseudonym, Uncle Snail. Here are a few examples of programs I created on Khan Academy in Javascript:
+            </p>
+            <div class="page center">
+              <div class="column-small column-left">
+                <h3>Shepherd</h3>
+                <p>
+                  <br>
+                  Age: 17<br>
+                  Time: 15 hrs<br>
+                  Lessons:<br>
+                  Graphics optimization,<br>
+                  Short deadlines<br>
+              </div>
+              <div class="column-large column-right">
+                <script src="https://www.khanacademy.org/computer-programming/shepherd-the-game-v-106/5073448501903360/embed.js?editor=yes&buttons=yes&author=yes&embed=yes&width=400px&height=400px"></script>
+                <p class="small-text">
+                  Shepherd is a game I created as a challenge against my brother to create the best game in 15 hours of creation time.
+                  That means we could only be creating - art, story, programming, testing, debugging - for 15 hours. When work begins, the clock starts. When work ends we move on.
+                  Also, we had to finish the 15 hours in one week, otherwise we would be cut off.
+                  My idea was a puzzle game where the player leads civilians to safety. Everything in the game was created in 15 hours.
+                  By the end of the challenge, I had a working, playable game with a few levels.
+                  This is a slightly enhanced version, with some errors fixed and polishing added It is still basically the same program as I originally created in 15 hours.
+                </p>
+              </div>
+            </div>
+            <div class="page center">
+              <div class="column-large column-left">
+                <script src="https://www.khanacademy.org/computer-programming/bird-bait-16/4568063333629952/embed.js?editor=yes&buttons=yes&author=yes&embed=yes&width=400px&height=400px"></script>
+                <p class="small-text">
+                  Bird Bait was my first major project in programming.
+                  Fortunately, it turned out well and I learned a lot.
+                  My largest challenge was thinking of a way to make the menu as a seperate state from the main game.
+                  I finally thought of a boolean variable to tell the program whether the menu was active.
+                  In later programs, I discovered the novelty of setting a single variable to control the state of a program.
+                  I would later discover that I had stumbled upon the concept of a finite state machine.
+                </p>
+                <p class="small-text">
+                  The idea for this game was that the player would have
+                  to keep two objects in mind as they fly through the dangers
+                  of the sky. Only one object is under the player's direct
+                  control, adding an extra twist. The bird follows the seed.
+                </p>
+              </div>
+              <div class="column-small column-right">
+                <h3>Bird Bait</h3>
+                <p>
+                  <br>
+                  Age: 13<br>
+                  Lessons:<br>
+                  Functions,<br>
+                  State machines<br>
+              </div>
+            </div>
+            <div class="page center">
+              <h3>Planet Generator</h3>
+              <p>
+                This was a larger project that I built in pieces.
+                I coded each function individually in a separate program,
+                then combine them into a single program to show off each piece.
+              </p>
+              <p>
+                Simply put, it uses procedural generation to create graphics using the ProcessingJS library
+                that are then stored as images, saving processing time as opposed
+                to drawing all the shapes each frame. It also generates names for different entities
+                on the planet, based on arrays of sounds that are added together using algorithms.
+              </p>
+              <script src="https://www.khanacademy.org/computer-programming/planet-explorer/5870857777250304/embed.js?editor=yes&buttons=yes&author=yes&embed=yes&width=600px&height=600px"></script>
+            </div>
+          </div>
+          <a onclick="toTop()" title="To the top"><img src="images/up_arrow_small.png" alt="Up arrow" class="arrow" style="width:50px; height:50px; border:0;"></a>
+        </div>
+      </div>
+    </body>
+</html>
