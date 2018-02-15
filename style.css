@@ -212,6 +212,10 @@ a:active, a:focus {
 	max-width: 1000px;
 }
 
+.row {
+	display: table-row;
+}
+
 .arrow {
 	opacity: 0.5;
 	filter: alpha(opacity = 50);/*For old browsers*/
@@ -236,6 +240,11 @@ a:active, a:focus {
 .entry h2 {
 	font-size: 20pt;
 	color: #dddddd;
+}
+
+.small-text {
+	font-size: 75%;
+	text-indent: 0;
 }
 
 .blog-hover {
