@@ -90,7 +90,7 @@ a:active, a:focus {
 	/*position: -webkit-sticky;/*for Safari*/
 	/*position: sticky;*/
 	position: relative; /*so z-index works*/
-	height: 30px;
+	height: 35px;
 	margin-bottom: -30px;/*so it doesn't move page when scrolled*/
 	top: 0;
 	/*width: 100%;*/
