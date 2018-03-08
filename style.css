@@ -29,6 +29,11 @@ h3 {
 	color: #9faf56;
 }
 
+.bold {
+	font-weight: bold;
+	font-size: 125%;
+}
+
 @font-face {
 	font-family: bedstead;
 	src : url(fonts/bedstead-ultracondensed.otf),
@@ -214,6 +219,24 @@ a:active, a:focus {
 
 .row {
 	display: table-row;
+}
+
+.text-row {
+	display: block;
+	margin: 30px;
+	padding: 10px;
+	border: 2px dashed #6f7582;
+}
+
+.text-row p {
+	display: table-cell;
+	vertical-align: middle;
+	width: 30%;
+	text-indent: 0;
+	top: 0;
+	height: 100%;
+	font-size: 110%;
+	padding: 20px;
 }
 
 .arrow {
