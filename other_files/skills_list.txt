@@ -1,0 +1,60 @@
+Flowcharts
+Pseudocode
+Java
+
+Web -
+  HTML
+  CSS
+  JS
+
+Real projects:
+Link website - What I learned: There are often systems already in place that one must work with. Simply because these systems may not be the most efficient does not mean they can be thrown out. We must learn to work with what is already built, and improve upon it.
+Database - What I learned: sometimes projects are harder than expected, and it can be difficult to put in the last steps to completion, and conform to client needs.
+~ ~ Need one more?!
+
+
+
+Object Oriented
+Programming statements -
+  functions (methods)
+  loops
+  if statements
+  classes
+  enumerations
+  interfaces
+  variable types
+
+Git and github
+
+basic SQL
+basic Python
+Basic Ruby on Rails
+
+Godot and GDScript
+~ ~ Wordpress (not yet accomplished)
+
+~Art~
+Blender
+Gimp
+Krita
+
+Websites-
+Khan Academy
+~ ~ Codepen (not yet accomplished)
+Code Academy
+Git hub
+
+Job shadows:
+Hudl
+Sandhills Publishing
+Assurity
+Brian Health
+Spreetail
+
+Field Trips:
+Centrix Solutions
+State of Nebraska
+Assurity
+Duncan Aviation
+Spreetail
+Firesprings
