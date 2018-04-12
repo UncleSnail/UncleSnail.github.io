@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Open Sans';
+  src: url("./fonts/Light/asset1.eot?v=1.1.0");
+  src: url("./fonts/Light/asset1.eot?#iefix&v=1.1.0") format("embedded-opentype"), url("./fonts/Light/asset1.woff2?v=1.1.0") format("woff2"), url("./fonts/Light/asset1.woff?v=1.1.0") format("woff"), url("./fonts/Light/asset1.ttf?v=1.1.0") format("truetype"), url("./fonts/Light/asset1.svg?v=1.1.0#Light") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+@font-face {
+  font-family: 'Open Sans';
+  src: url("./fonts/LightItalic/asset2.eot?v=1.1.0");
+  src: url("./fonts/LightItalic/asset2.eot?#iefix&v=1.1.0") format("embedded-opentype"), url("./fonts/LightItalic/asset2.woff2?v=1.1.0") format("woff2"), url("./fonts/LightItalic/asset2.woff?v=1.1.0") format("woff"), url("./fonts/LightItalic/asset2.ttf?v=1.1.0") format("truetype"), url("./fonts/LightItalic/asset2.svg?v=1.1.0#LightItalic") format("svg");
+  font-weight: 300;
+  font-style: italic; }

@@ -1,0 +1,111 @@
+
+//Created by Caleb Marcoux (Uncle Snail)
+//I solute you, my fellow programmer.
+
+//Small screens (<$small) will have the title, face, and navbar inline down the page.
+//Medium screens (<$medium >$small) will have a smaller title, face, and borders. (scaled by 66%)
+//Large screens (<$large >$medium) will have standard sizes of face, title, and borders, all left aligned with right smooth fade off.
+//Giant screens (>$large) will have same size face and title. The border swoops up dramatically on either end, covering image edge, and contense is locked to center of page at normal size.
+@mixin respond-to ($media) {
+  @if $media == small {
+    @media only screen and (max-width: $breakpoint-small) {@content;}
+  }
+  @else if $media == medium {
+    @media only screen and (min-width: $breakpoint-small + 1) and (max-width: $breakpoint-medium) {@content;}
+  }
+  @else if $media == large {
+    @media only screen and (min-width: $breakpoint-medium + 1) and (max-width: $breakpoint-large) {@content;}
+  }
+  @else if $media == giant {
+    @media only screen and (min-width: $breakpoint-large + 1) {@content;}
+  }
+}
+
+@mixin wave-image ($path, $width, $height) {
+  background-image: url($path);
+  background-size: $width $height;
+  height: $height;
+  top: (-$height);
+}
+
+@mixin add-font ($name) {
+  @if $name == unclesnail {
+    font-family: 'unclesnail', sans-serif;
+  }
+  @else if $name == sourcepro {
+    font-family: 'sourcepro', sans-serif;
+  }
+}
+
+@mixin font-size ($size) {
+  @if $size == tiny {
+    @include respond-to(small) {
+      font-size: $text-size-tiny-s;
+    };
+    @include respond-to(medium) {
+      font-size: $text-size-tiny-m;
+    };
+    @include respond-to(large) {
+      font-size: $text-size-tiny-l;
+    };
+    @include respond-to(giant) {
+      font-size: $text-size-tiny-s;
+    };
+  }
+  @else if $size == small {
+    @include respond-to(small) {
+      font-size: $text-size-small-s;
+    };
+    @include respond-to(medium) {
+      font-size: $text-size-small-m;
+    };
+    @include respond-to(large) {
+      font-size: $text-size-small-l;
+    };
+    @include respond-to(giant) {
+      font-size: $text-size-small-s;
+    };
+  }
+  @else if $size == normal {
+    @include respond-to(small) {
+      font-size: $text-size-normal-s;
+    };
+    @include respond-to(medium) {
+      font-size: $text-size-normal-m;
+    };
+    @include respond-to(large) {
+      font-size: $text-size-normal-l;
+    };
+    @include respond-to(giant) {
+      font-size: $text-size-normal-s;
+    };
+  }
+  @else if $size == large {
+    @include respond-to(small) {
+      font-size: $text-size-large-s;
+    };
+    @include respond-to(medium) {
+      font-size: $text-size-large-m;
+    };
+    @include respond-to(large) {
+      font-size: $text-size-large-l;
+    };
+    @include respond-to(giant) {
+      font-size: $text-size-large-s;
+    };
+  }
+  @else if $size == giant {
+    @include respond-to(small) {
+      font-size: $text-size-giant-s;
+    };
+    @include respond-to(medium) {
+      font-size: $text-size-giant-m;
+    };
+    @include respond-to(large) {
+      font-size: $text-size-giant-l;
+    };
+    @include respond-to(giant) {
+      font-size: $text-size-giant-s;
+    };
+  }
+}

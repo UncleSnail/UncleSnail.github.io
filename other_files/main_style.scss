@@ -1,0 +1,35 @@
+//Created by Caleb Marcoux (Uncle Snail)
+//I solute you, my fellow programmer.
+
+//Color variables
+//Dark theme
+$dark-background-color: #2b2b2b;
+$dark-background-shadow-color: #1e1e1e;
+$dark-background-highlight-color: #333;
+//$dark-foreground-color: #45A6D5;
+$dark-highlight-color: #369;
+$dark-title-color: #fff;
+$dark-text-color: #e1e1e1;
+
+
+//Light theme
+$light-background-color: #e5e5e5;
+$light-background-shadow-color: #eee;
+$light-background-highlight-color: #fff;
+//$light-foreground-color: #2b3135;
+$light-highlight-color: #369;
+$light-title-color: #000;
+$light-text-color: #2d2d2d;
+
+//universal attributes
+body {
+  background-color: $dark-background-color;
+}
+
+h1 {
+  color: $dark-title-color;
+}
+
+p {
+  color: $dark-text-color;
+}

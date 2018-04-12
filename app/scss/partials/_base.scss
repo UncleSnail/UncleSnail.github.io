@@ -1,0 +1,218 @@
+
+//Created by Caleb Marcoux (Uncle Snail)
+//I solute you, my fellow programmer.
+
+//universal attributes
+
+@font-face {
+  font-family: unclesnail;
+  src: url('fonts/uncle_snail.ttf');
+}
+
+@font-face {
+  font-family: sourcepro;
+  src: url('fonts/sans_source_pro/TTF/SourceSansPro-Regular.ttf');
+}
+
+body {
+  background-color: $light-background-color;
+  @include add-font(sourcepro);
+  @include font-size(small);
+  margin: 0;
+  text-align: center;
+}
+
+%h {
+  @include add-font(unclesnail);
+  font-weight: normal;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+}
+
+h1 {
+  @extend %h;
+  @include font-size(giant);
+}
+
+h2 {
+  @extend %h;
+  @include font-size(large);
+}
+
+h3 {
+  @extend %h;
+  @include font-size(normal);
+}
+
+p {
+  color: $dark-text-color;
+}
+
+a {
+  color: $dark-text-color;
+  &:link,
+  &:visited,
+  &:hover,
+  &:focus,
+  &:active {
+    color: $dark-hover-color;
+    outline: 0;
+    text-decoration: none;
+  }
+}
+
+nav {
+  color: $dark-text-color;
+  @include add-font('unclesnail');
+  a {
+    color: $dark-text-color !important;
+    text-decoration: none;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $dark-hover-color !important;
+    }
+  }
+  .active {
+    color: $light-highlight-color !important;
+    cursor: pointer;
+  }
+}
+
+footer {
+  background-color: $dark-background-color;
+  //height: 400px;
+  position: relative;
+  &::before {
+    background-image: url('images/dark_footer_border_top.png');
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: 1700px 130px;
+    content: '';
+    display: block;
+    height: 130px;
+    position: absolute;
+    top: -130px;
+    width: 100%;
+    @include respond-to(small) {
+      background-image: url('images/dark_footer_border_top_small.png');
+      background-position: center bottom;
+      background-size: 480px 83px;
+      height: 83px;
+      top: -83px;
+    }
+  }
+}
+
+//Decorate
+.active {
+  color: $dark-highlight-color;
+}
+
+.underline {
+  border-bottom: $light-highlight-color solid 2px;
+}
+
+.highlight {
+  color: $dark-highlight-color;
+}
+
+.round-link {
+  //In script make the radius width/2 so circle button works.
+  border-radius: 100px;
+}
+
+.button {
+  display: inline-block;
+  width: auto;
+  border-radius: 10px;
+  background-color: $button-color;
+  padding: 10px;
+  margin: 15px;
+  justify-content: space-around;
+  &:link,
+  &:visited,
+  &:hover,
+  &:focus,
+  &:active {
+    color: $button-text-color !important;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $button-hover-color;
+  }
+}
+
+//Non-universal attributes.
+
+//Styler classes
+
+.light {
+  background-color: $light-background-color;
+  h1 {
+    color: $light-title-color;
+  }
+  h2 {
+    color: $light-h2-color;
+  }
+  h3 {
+    color: $light-h3-color;
+  }
+  a {
+    color: $light-highlight-color;
+    &:hover,
+    &:focus,
+    &:active, {
+      color: $light-hover-color;
+    }
+  }
+
+  //Decorate
+  .active {
+    color: $light-highlight-color;
+  }
+
+  .underline {
+    border-bottom: $light-highlight-color solid 2px;
+  }
+
+  .highlight {
+    color: $light-highlight-color;
+  }
+}
+
+.dark {
+  background-color: $dark-background-color;
+  h1 {
+    color: $dark-title-color;
+  }
+  h2 {
+    color: $dark-h2-color;
+  }
+  h3 {
+    color: $dark-h3-color;
+  }
+  a {
+    color: $dark-highlight-color;
+    &:hover,
+    &:focus,
+    &:active, {
+      color: $dark-hover-color;
+    }
+  }
+
+  //Decorate
+  .active {
+    color: $dark-highlight-color;
+  }
+
+  .underline {
+    border-bottom: $dark-highlight-color solid 2px;
+  }
+
+  .highlight {
+    color: $dark-highlight-color;
+  }
+}

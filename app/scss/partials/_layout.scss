@@ -1,0 +1,136 @@
+
+//Created by Caleb Marcoux (Uncle Snail)
+//I solute you, my fellow programmer.
+
+//Layout classes
+
+//Universal page options
+//wave-right, left, center, edge, are for defining which side the highest point of the wave will be on.
+//when a page is marked as either light or dark it will change the color of the wave to match.
+
+//Defaults
+.box {
+  margin: 25px;
+}
+
+.center-vertical {
+  align-self: center;
+  display: flex;
+}
+
+//Semantic elements
+section {
+  padding-bottom: 100px !important;
+  @include respond-to(small) {
+    padding-bottom: 50px !important;
+  }
+  @include respond-to(medium) {
+    padding-bottom: 83px !important;
+  }
+}
+
+//Other classes
+%wave {
+  position: relative;
+  &::before {
+    @include wave-image('images/wave_large_light.png', 1700px, 130px);
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+  }
+}
+
+.wave-light {
+  @extend %wave;
+  &::before {
+    @include wave-image('images/wave_large_light.png', 1700px, 130px);
+    @include respond-to(small) {
+      @include wave-image('images/wave_small_light.png', 480px, 129px);
+      background-position: center bottom;
+    }
+    @include respond-to(medium) {
+      @include wave-image('images/wave_medium_light.png', 821px, 83px);
+    }
+  }
+}
+
+.wave-dark {
+  @extend %wave;
+  &::before {
+    @include wave-image('images/wave_large_dark.png', 1700px, 130px);
+    @include respond-to(small) {
+      @include wave-image('images/wave_small_dark.png', 480px, 129px);
+      background-position: center bottom;
+    }
+    @include respond-to(medium) {
+      @include wave-image('images/wave_medium_dark.png', 821px, 83px);
+    }
+  }
+}
+
+.columns {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  &.right {
+    justify-content: flex-end;
+    div {
+      display: block;
+      width: 50%;
+    }
+  }
+  @include respond-to(small) {
+    flex-direction: column;
+    &.right {
+      justify-content: flex-start;
+      div {
+        display: block;
+        width: 100%;
+        //Temporary fix for white top.
+        h1 {
+          margin-top: 0;
+          padding-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+.fill {
+  height: inherit;
+}
+
+.horizontal {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  div {
+    flex: 1;
+  }
+  @include respond-to (small) {
+    flex-direction: column-reverse;
+    div {
+      flex: auto;
+    }
+  }
+}
+
+.box-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  * {
+    flex: 1;
+  }
+  @include respond-to(small) {
+    flex-direction: column;
+  }
+}

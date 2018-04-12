@@ -1,0 +1,55 @@
+
+//Created by Caleb Marcoux (Uncle Snail)
+//I solute you, my fellow programmer.
+
+//Import partials
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/layout";
+@import "partials/base";
+
+//Style and layout informations block -
+
+// _layout contains classes related to positiioning elements.
+// _base contains the base element selectors and styles.
+
+//Some classes are dependant on which other companion classes are present.
+//For example, the classes right and left should be used with another class.
+//If a div is in both the right and the wave classes, it will form a wave
+//with the highest point on the right of the screen.
+
+//Specific, non-generic classes.
+
+header {
+  background-image: url('images/heading_large.png');
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  height: 520px;
+  text-align: center;
+  width: 100%;
+  @include respond-to(small) {
+    background-image: url('images/heading_small.png');
+    background-position: center bottom;
+    display: block;
+    height: 400px;
+    div {
+      display: block;
+      div {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+  @include respond-to(medium) {
+    background-image: url('images/heading_medium.png');
+    height: 343px;
+  }
+}
+
+.testimonials {
+  @include font-size(small);
+  min-height: 300px;
+  * {
+    flex-basis: auto;
+  }
+}

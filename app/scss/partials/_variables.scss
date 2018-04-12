@@ -1,0 +1,71 @@
+
+//Created by Caleb Marcoux (Uncle Snail)
+//I solute you, my fellow programmer.
+
+//Dark theme
+$dark-background-color: #2b2b2b;
+$dark-background-shadow-color: #1e1e1e;
+$dark-background-highlight-color: #333;
+//$dark-foreground-color: #45A6D5;
+$dark-title-color: #fff;
+$dark-text-color: #e3e3e3;
+$dark-highlight-color: #459ddb;
+$dark-hover-color: #6cc3ff;
+
+$dark-h2-color: #fff;
+$dark-h3-color: #fff;
+
+
+//Light theme
+$light-background-color: #fff;
+$light-background-shadow-color: #eee;
+$light-background-highlight-color: #fff;
+//$light-foreground-color: #2b3135;
+$light-title-color: #000;
+$light-text-color: #2d2d2d;
+$light-highlight-color: #3195dd;
+$light-hover-color: #3eafff;
+
+$light-h2-color: #000;
+$light-h3-color: #000;
+
+
+//Global
+$button-color: #3195dd;
+$button-text-color: #fff;
+$button-hover-color: #0164ac;
+
+//Sizes
+//Giant
+$text-size-giant-g: 50pt;
+$text-size-large-g: 30pt;
+$text-size-normal-g: 25pt;
+$text-size-small-g: 14pt;
+$text-size-tiny-g: 10pt;
+//Large
+$text-size-giant-l: 45pt;
+$text-size-large-l: 28pt;
+$text-size-normal-l: 20pt;
+$text-size-small-l: 14pt;
+$text-size-tiny-l: 10pt;
+//Medium
+$text-size-giant-m: 30pt;
+$text-size-large-m: 20pt;
+$text-size-normal-m: 15pt;
+$text-size-small-m: 12pt;
+$text-size-tiny-m: 8pt;
+//small
+$text-size-giant-s: 25pt;
+$text-size-large-s: 22pt;
+$text-size-normal-s: 14pt;
+$text-size-small-s: 11pt;
+$text-size-tiny-s: 8pt;
+
+//Media handling
+$breakpoint-small: 480px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 1366px;
+//Small screens (<$small) will have the title, face, and navbar inline down the page.
+//Medium screens (<$medium >$small) will have a smaller title, face, and borders. (scaled by 66%)
+//Large screens (<$large >$medium) will have standard sizes of face, title, and borders, all left aligned with right smooth fade off.
+//Giant screens (>$large) will have same size face and title. The border swoops up dramatically on either end, covering image edge, and contense is locked to center of page at normal size.
