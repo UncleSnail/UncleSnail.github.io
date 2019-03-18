@@ -13,7 +13,7 @@ gulp.task('default', function() {
 });
 
 gulp.task('watch', ['browser-sync', 'sass', 'html'], function() {
-  //Run browser-sync and sass when tast starts,
+  //Run browser-sync and sass when task starts,
   //then when a sass file changes, run sass again.
   gulp.watch('app/scss/**/*.+(scss|sass)', ['sass']);
   gulp.watch('app/html/*.html', ['html']).on('change', browserSync.reload);
