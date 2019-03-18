@@ -1,4 +1,4 @@
-var gulp = require('gulp');
+const { src, dest } = require('gulp');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
 var imagemin = require('gulp-imagemin');
@@ -7,10 +7,13 @@ var plumber = require('gulp-plumber');
 var autoprefixer = require('gulp-autoprefixer');
 var changed = require('gulp-changed');
 
-gulp.task('default', function() {
-  // place code for your default task here
-  console.log('Default task run in gulp.');
-});
+function defaultTask(cb) {
+  cd();
+}
+
+function watch() {
+  return src('app/')
+}
 
 gulp.task('watch', ['browser-sync', 'sass', 'html'], function() {
   //Run browser-sync and sass when tast starts,
@@ -20,6 +23,11 @@ gulp.task('watch', ['browser-sync', 'sass', 'html'], function() {
   gulp.watch('app/js/**/*.js', browserSync.reload);
   //**/* means check subdirectories.
 });
+
+function html() {
+  return src('app/html/*.html')
+    .pipe(dest('dist/'))
+}
 
 gulp.task('html', function() {
   //Will be the task to compile pug. For now it just copies the html.
@@ -70,3 +78,5 @@ gulp.task('browser-sync', function() {
       }
     });
 });
+
+exports.default = defaultTask
