@@ -7,8 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Caleb Marcoux</title>
-  <script src="script.js"></script>
   <link type="text/css" rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
   <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 
@@ -28,32 +29,62 @@
     <!--</div>-->
   </header>
 
-  <!-- Github Section -->
-  <section class="light" id="github-home">
-    <div class="fixed wave-light">
-      <div class="horizontal">
-        <div>
-          <img src="images/github.png" alt="">
-          <h3>
-            Check it out<br>
-            on
-            <a href="https://github.com/UncleSnail/UncleSnail.github.io" target="_blank">
-              GitHub
-            </a>
-          </h3>
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="carousel-pages">
+      <div class="carousel-page">
+        <div class="horizontal">
+          <div>
+            <h1>Code</h1>
+            <h2>
+              Website handcoded<br>
+              in
+              <a href="">HTML</a>,
+              <a href="">SASS</a>,<br>
+              and
+              <a href="">JQUERY</a>
+            </h2>
+            <a href="" class="button">Learn More</a>
+          </div>
+          <div>
+            <img src="images/github.png" alt="">
+            <h3>
+              Check it out<br>
+              on
+              <a href="https://github.com/UncleSnail/UncleSnail.github.io" target="_blank">
+                GitHub
+              </a>
+            </h3>
+          </div>
         </div>
-        <div>
-          <h1>Code</h1>
-          <h2>
-            Website handcoded<br>
-            in
-            <a href="">HTML</a>,
-            <a href="">SASS</a>,<br>
-            and
-            <a href="">JQUERY</a>
-          </h2>
-          <a href="" class="button">Learn More</a>
-        </div>
+      </div>
+      <div class="carousel-page shepherd" id="shepherd">
+        <p class="shepherd">Shepherd</p>
+      </div>
+      <div class="carousel-page">
+        <script src="https://www.khanacademy.org/computer-programming/bird-bait-16/4568063333629952/embed.js?editor=yes&buttons=yes&author=yes&embed=yes&width=400px&height=400px"></script>
+      </div>
+      <div class="carousel-page">
+        <iframe src="https://www.khanacademy.org/computer-programming/planet-explorer/5870857777250304/embedded?id=1553046571320-0.8628710634770087&origin=http%3A%2F%2Fwww.calebmarcoux.com&author=yes&height=600px&buttons=yes&width=600px&editor=yes&embed=yes" style="border: 0px none; width: 1140px; height: 667px;" scrolling="no" frameborder="0">
+          #document
+            <!DOCTYPE html>
+            <html class="embed to-top" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en" style=""></html>
+        </iframe>
+      </div>
+    </div>
+    <div class="carousel-nav">
+      <div class="carousel-thumbnail">
+        <img src="images/web.png" alt="" class="round-link">
+      </div>
+      <div class="carousel-thumbnail">
+        <img src="images/python.png" alt="" class="round-link">
+      </div>
+      <div class="carousel-thumbnail">
+        <img src="images/sql.png" alt="" class="round-link">
+      </div>
+      <div class="carousel-thumbnail">
+        <img src="images/java.png" alt="" class="round-link">
       </div>
     </div>
   </section>
@@ -165,5 +196,9 @@
       </div>
     </div>
   </footer>
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="slick/slick.min.js"></script>
+  <script src="js/script.min.js"></script>
 </body>
 </html>

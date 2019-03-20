@@ -60,3 +60,33 @@ window.onscroll = function() {
   }
   nav.style.width = startWidth + 'px';
 }
+
+$(document).ready(function(){
+  $(".shepherd").click(function(){
+    //$(this).innerHTML = '<script src="https://www.khanacademy.org/computer-programming/shepherd-the-game-v-106/5073448501903360/embed.js?editor=yes&buttons=yes&author=yes&embed=yes"></script>'
+    $(this).innerHTML = 'hello';
+    //$(".embed").css("width", "100%");
+  });
+  $('.carousel-pages').slick({
+    lazyLoad: 'ondemand',
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.carousel-nav',
+    adaptiveHeight: true
+  });
+  $('.carousel-nav').slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    asNavFor: '.carousel-pages',
+    dots: true,
+    centerMode: true,
+    focusOnSelect: true
+  });
+
+  //document.getElementById("shepherd").innerHTML = '<iframe src="https://www.khanacademy.org/computer-programming/planet-explorer/5870857777250304/embedded?id=1553046571320-0.8628710634770087&origin=http%3A%2F%2Fwww.calebmarcoux.com&author=yes&height=600px&buttons=yes&width=600px&editor=yes&embed=yes" style="border: 0px none; width: 1140px; height: 667px;" scrolling="no" frameborder="0">#document<!DOCTYPE html><html class="embed to-top" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en" style=""></html></iframe>'
+
+  $('.to-top').onclick = toTop;
+  $(".embed").css("width", "100%");
+});

@@ -115,7 +115,7 @@ section {
     flex: 1;
   }
   @include respond-to (small) {
-    flex-direction: column-reverse;
+    flex-direction: column;
     div {
       flex: auto;
     }
