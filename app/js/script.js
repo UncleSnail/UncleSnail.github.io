@@ -11,6 +11,10 @@ toTop = function () {
   });
 };
 
+removeWidth = function () {
+  $("p").removeAttr('style');
+}
+
 toNext = function (next) {
   document.querySelector(next).scrollIntoView({
     behavior: 'smooth'
@@ -63,9 +67,9 @@ window.onscroll = function() {
 
 $(document).ready(function(){
   $(".shepherd").click(function(){
-    //$(this).innerHTML = '<script src="https://www.khanacademy.org/computer-programming/shepherd-the-game-v-106/5073448501903360/embed.js?editor=yes&buttons=yes&author=yes&embed=yes"></script>'
-    $(this).innerHTML = 'hello';
-    //$(".embed").css("width", "100%");
+    $(this).html('<iframe src="https://www.khanacademy.org/computer-programming/planet-explorer/5870857777250304/embedded?id=1553046571320-0.8628710634770087&origin=http%3A%2F%2Fwww.calebmarcoux.com&author=yes&height=600px&buttons=yes&width=600px&editor=yes&embed=yes" style="border: 0px none; width: 1140px; height: 667px;" scrolling="no" frameborder="0">#document<!DOCTYPE html><html class="embed to-top" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en" style=""></html></iframe>');
+    //$(this).html('hello');
+    $("html").css("width", "");
   });
   $('.carousel-pages').slick({
     lazyLoad: 'ondemand',
@@ -87,6 +91,9 @@ $(document).ready(function(){
 
   //document.getElementById("shepherd").innerHTML = '<iframe src="https://www.khanacademy.org/computer-programming/planet-explorer/5870857777250304/embedded?id=1553046571320-0.8628710634770087&origin=http%3A%2F%2Fwww.calebmarcoux.com&author=yes&height=600px&buttons=yes&width=600px&editor=yes&embed=yes" style="border: 0px none; width: 1140px; height: 667px;" scrolling="no" frameborder="0">#document<!DOCTYPE html><html class="embed to-top" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en" style=""></html></iframe>'
 
-  $('.to-top').onclick = toTop;
-  $(".embed").css("width", "100%");
+  $('.to-top').click(toTop);
+  $("button").click(function () {
+    $("*").removeAttr("style");
+  });
+  $("html").css("width", "");
 });
