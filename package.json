@@ -1,7 +1,7 @@
 {
-  "name": "caleb-marcoux",
-  "version": "1.0.1",
-  "description": "The first official version of CalebMarcoux.com",
+  "name": "unclesnail.github.io",
+  "version": "1.0.0",
+  "description": "A mobile-first approach to my personal website",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,33 +10,23 @@
     "type": "git",
     "url": "git+https://github.com/UncleSnail/UncleSnail.github.io.git"
   },
-  "keywords": [
-    "Caleb",
-    "Marcoux",
-    "Resume",
-    "Uncle",
-    "Snail"
-  ],
   "author": "Caleb Marcoux",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/UncleSnail/UncleSnail.github.io/issues"
   },
   "homepage": "https://github.com/UncleSnail/UncleSnail.github.io#readme",
+  "dependencies": {},
   "devDependencies": {
-    "browser-sync": "^2.23.6",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^5.0.0",
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
     "gulp-changed": "^3.2.0",
-    "gulp-css-useref": "0.0.1",
-    "gulp-filter": "^5.1.0",
-    "gulp-imagemin": "^4.1.0",
-    "gulp-plumber": "^1.2.0",
-    "gulp-sass": "^4.0.0",
-    "gulp-uglify": "^3.0.0"
-  },
-  "dependencies": {
-    "gulp-if": "^2.0.2",
-    "gulp-if-else": "^1.0.3"
+    "gulp-imagemin": "^5.0.3",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "node-sass": "^4.11.0"
   }
 }
