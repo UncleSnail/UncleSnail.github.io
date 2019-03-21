@@ -7,6 +7,9 @@ const autoprefixer = require('gulp-autoprefixer');
 const changed = require('gulp-changed');
 const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
+const coffee = require('gulp-coffee');
+const babel = require('gulp-babel');
+const clean_css = require('gulp-clean-css');
 
 function watchAll() {
   //Run browser-sync and sass when task starts,
@@ -24,19 +27,27 @@ function html() {
 }
 
 function sass() {
+  // Don't use "changed" because if any file is changed, all need to be re-compiled
   return src('app/scss/*.+(scss|sass)')
     .pipe(plumber())
-    .pipe(gulp_sass({outputStyle: 'compressed'}))
+    .pipe(gulp_sass())
     .pipe(autoprefixer({
-      browsers: ['last 3 versions']
+      browsers: ['last 5 versions']
     }))
+    .pipe(dest('app/pretty_transpiled/css'))
+    .pipe(clean_css())
     .pipe(dest('dist/'))
     .pipe(browserSync.stream());
 }
 
 function js() {
-  return src('app/js/*.js')
+  return src('app/js/*.coffee')
     .pipe(changed('dist/js'))
+    .pipe(coffee())
+    .pipe(src('app/js/*.js'))
+    .pipe(changed('dist/js'))
+    .pipe(babel())
+    .pipe(dest('app/pretty_transpiled/js'))
     .pipe(uglify())
     .pipe(rename({ extname: '.min.js' }))
     .pipe(dest('dist/js'));
