@@ -17,6 +17,7 @@ function watchAll() {
   watch('app/scss/**/*.+(scss|sass)', { ignoreInitial: false }, sass);
   watch('app/html/*.html', { ignoreInitial: false }, html).on('change', browserSync.reload);
   watch('app/js/**/*.js', { ignoreInitial: false }, js).on('change', browserSync.reload);
+  watch('app/images/**/*.+(png|jpg|gif|svg)', { ignoreInitial: false }, images).on('change', browserSync.reload);
   //**/* means check subdirectories.
 }
 
@@ -54,9 +55,10 @@ function js() {
 }
 
 function images() {
-  return src('app/images/**/*.+(png|jpg|gif|svg)')
+  return src('app/images/**/*.+(png|jpg|gif|PNG)')
     .pipe(changed('dist/images'))
     .pipe(imagemin())
+    .pipe(src('app/images/**/*.svg'))
     .pipe(dest('dist/images'));
 }
 
@@ -87,4 +89,4 @@ function browser_sync() {
 }
 
 exports.default = parallel(fonts, images, js, sass, html);
-exports.watch = parallel(fonts, images, browser_sync, watchAll);
+exports.watch = parallel(fonts, browser_sync, watchAll);
