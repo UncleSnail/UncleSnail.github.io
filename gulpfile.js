@@ -2,10 +2,12 @@ const { src, dest, watch, parallel, series } = require('gulp');
 const gulp_sass = require('gulp-sass');
 const browserSync = require('browser-sync').create();
 const imagemin = require('gulp-imagemin');
-const plumber = require('gulp-plumber');
+const plumber = require('gulp-plumber'); // Plumber is used to keep the build running even if there is an error.
 const autoprefixer = require('gulp-autoprefixer');
 const changed = require('gulp-changed');
-const uglify = require('gulp-uglify');
+const uglifyes = require('uglify-es'); // Needed for ES6 support instead of the default module.
+const composer = require('gulp-uglify/composer'); // Compose uglify with uglify-es
+const uglify = composer(uglifyes, console); // Create final uglify
 const rename = require('gulp-rename');
 const coffee = require('gulp-coffee');
 const babel = require('gulp-babel');
@@ -16,7 +18,7 @@ function watchAll() {
   //then when a sass file changes, run sass again.
   watch('app/scss/**/*.+(scss|sass)', { ignoreInitial: false }, sass);
   watch('app/html/*.html', { ignoreInitial: false }, html).on('change', browserSync.reload);
-  watch('app/js/**/*.js', { ignoreInitial: false }, js).on('change', browserSync.reload);
+  watch('app/js/**/*.+(js|coffee)', { ignoreInitial: false }, js).on('change', browserSync.reload);
   watch('app/images/**/*.+(png|jpg|gif|svg)', { ignoreInitial: false }, images).on('change', browserSync.reload);
   //**/* means check subdirectories.
 }
@@ -47,6 +49,7 @@ function js() {
     .pipe(coffee())
     .pipe(src('app/js/*.js'))
     .pipe(changed('dist/js'))
+    .pipe(plumber())
     .pipe(babel())
     .pipe(dest('app/pretty_transpiled/js'))
     .pipe(uglify())
