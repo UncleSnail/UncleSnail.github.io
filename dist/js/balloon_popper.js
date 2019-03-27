@@ -61,7 +61,7 @@ function backdrop() {
     }
 };
 
-var mousePressed = function () {
+function mousePressed() {
     for (var i = 0; i < balloons.length; i++) {
         var N = map (noise(frameCount/500+balloons[i].y/500),0,1,-100,100);
         if (dist(mouseX,mouseY,balloons[i].x+N,balloons[i].y+s/1.5)<s/2.5){

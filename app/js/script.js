@@ -23,4 +23,8 @@ $(document).ready(function(){
     centerMode: true,
     focusOnSelect: true
   });
+  $('.carousel-nav').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    console.log(currentSlide);
+    console.log(nextSlide);
+  });
 });
