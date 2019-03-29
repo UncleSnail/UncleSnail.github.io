@@ -27,4 +27,15 @@ $(document).ready(function(){
     console.log(currentSlide);
     console.log(nextSlide);
   });
+  $.ajax({
+    url: 'js/balloon_popper.js',
+    dataType: 'text',
+    success: function(data) {
+      $('.code').text(data);
+    }
+  });
+  //Only load the code prettifier after the content is read.
+  prettify = document.createElement("script");
+  prettify.src = "https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js";
+  $('head').append(prettify);
 });
