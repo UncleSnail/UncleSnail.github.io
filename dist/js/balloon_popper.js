@@ -2,6 +2,7 @@
 // https://www.khanacademy.org/computer-programming/balloon-popper/5894008298799104
 // To preserve authenticity, as little code as possible was changed.
 
+
 // If you like this. Check out Bird Bait, my other game. That is where I took this background from.
 //I AM THE ONE WHO ORIGINALLY MADE ALL THE PROGRAMS ON MY PROFILE. If it is created off of someone elses then I saved a spin off. Please save a spin off if you want to change this code or re-save it.
 
