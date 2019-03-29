@@ -225,17 +225,17 @@ function generateRockName(strings) {
 
 /**Crystal generation code**/
 function generateCrystal(w, h, offset,variation,mainColor,shineOffset,resolution) {
-    var point = new PVector(round(random(20,w-20)),0);
+    var point = createVector(round(random(20,w-20)),0);
     var bottom = {
-        l : new PVector(round(random(0+variation,(w/2)-5)),h),
-        r : new PVector(round(random((w/2)+5,w-variation)),h)
+        l : createVector(round(random(0+variation,(w/2)-5)),h),
+        r : createVector(round(random((w/2)+5,w-variation)),h)
     };
     var middle = {
-        l : new PVector(0,round(random((h*offset)-variation,(h*offset)+variation))),
-        r : new PVector(w,round(random((h*offset)-variation,(h*offset)+variation)))
+        l : createVector(0,round(random((h*offset)-variation,(h*offset)+variation))),
+        r : createVector(w,round(random((h*offset)-variation,(h*offset)+variation)))
     };
-    var center = new PVector(point.x+round(random(-variation,variation)),((middle.r.y+middle.l.y)/2)+round(random(-variation,variation)));
-    var crystal = createGraphics(w,h,JAVA2D);
+    var center = createVector(point.x+round(random(-variation,variation)),((middle.r.y+middle.l.y)/2)+round(random(-variation,variation)));
+    var crystal = createGraphics(w,h);
     crystal.background(255, 255, 255,0);
     crystal.fill (mainColor[0],mainColor[1],mainColor[2]);
     crystal.noStroke();
@@ -283,10 +283,10 @@ function generateCrystal(w, h, offset,variation,mainColor,shineOffset,resolution
     crystal.vertex(w/2,h);
     crystal.endShape();
 
-    return crystal.get();
+    return crystal;
 };
 function generateCrystalStructure(w,h,crystalNumber,secondaryCrystalNumber) {
-    var crystal = createGraphics(w,h,JAVA2D);
+    var crystal = createGraphics(w,h);
     crystal.background(255, 255, 255,0);
     var col = [random(0,255),random(0,255),random(0,255)];
     var offset = random(1/16,1/3);
@@ -296,11 +296,11 @@ function generateCrystalStructure(w,h,crystalNumber,secondaryCrystalNumber) {
         var high = random(h-i*50-h/8,h-(h/4)-i*50-h/8);
         var valueOffset = random(-30,30);
         var hueOffset = [random(-hueOffsetAmount,hueOffsetAmount),random(-hueOffsetAmount,hueOffsetAmount),random(-hueOffsetAmount,hueOffsetAmount)];
-        crystal.pushMatrix();
+        crystal.push();
         crystal.translate(w/2,h-h/8);
         crystal.rotate(random(-0.2-(i*0.2),0.2+(i*0.2)));
         crystal.image(generateCrystal(wide,high,offset,10,[col[0]+valueOffset+hueOffset[0], col[1]+valueOffset+hueOffset[1], col[2]+valueOffset+hueOffset[2]],1,30),-wide/2,-high);
-        crystal.popMatrix();
+        crystal.pop();
     }//main gems
     for (var i = 0; i < secondaryCrystalNumber; i ++) {//bottom gems
         var o = (w/2)/secondaryCrystalNumber;
@@ -309,14 +309,14 @@ function generateCrystalStructure(w,h,crystalNumber,secondaryCrystalNumber) {
         var high = random(h-h*0.95,h-h*0.8);
         var valueOffset = random(-30,30);
         var hueOffset = [random(-hueOffsetAmount,hueOffsetAmount),random(-hueOffsetAmount,hueOffsetAmount),random(-hueOffsetAmount,hueOffsetAmount)];
-        crystal.pushMatrix();
+        crystal.push();
         crystal.translate(w/4+i*o,h-h/8);
         crystal.scale(1-abs(random(0-(i*(1/secondaryCrystalNumber)),1-(i*(1/secondaryCrystalNumber)))));//small on edges
         crystal.rotate(random(-1+(i*(2/secondaryCrystalNumber)),0+(i*(2/secondaryCrystalNumber))));//more tilted on edges
         crystal.image(generateCrystal(wide,high,offset,5,[col[0]+valueOffset+hueOffset[0], col[1]+valueOffset+hueOffset[1], col[2]+valueOffset+hueOffset[2]],1,30),-wide/2,-high);
-        crystal.popMatrix();
+        crystal.pop();
     }
-    return crystal.get();
+    return crystal;
 };
 /**End crystal generation code**/
 
@@ -333,12 +333,12 @@ function createPlanet(size,color1,color2,rings,ringColor1,ringColor2,ringSizeFac
         ringColors[i] = color(lerpColor(ringColor1,ringColor2,random(0,1)));
     }//set ring colors
     //size+1 to avoid clipping
-    var planet = createGraphics(size+1,size+1,JAVA2D);
+    var planet = createGraphics(size+1,size+1);
     planet.background(0,0,0,0);
 
     //Rings (back)
     if (rings) {
-        planet.pushMatrix();
+        planet.push();
         planet.translate(size/2,size/2);
         planet.rotate(ringRotation);
 
@@ -349,12 +349,12 @@ function createPlanet(size,color1,color2,rings,ringColor1,ringColor2,ringSizeFac
             planet.strokeWeight(2);
             planet.arc(0,0,size-5-i*2,(size-i*2)/ringTilt,3.2,6.4);
         }
-        planet.popMatrix();
+        planet.pop();
     }
     //End rings
 
     //Main planet
-    planet.pushMatrix();
+    planet.push();
     planet.translate(size/2,size/2);
 
     //if rings, make planet smaller (to fit on canvas)
@@ -382,13 +382,13 @@ function createPlanet(size,color1,color2,rings,ringColor1,ringColor2,ringSizeFac
     //Squiggles
 
 
-    planet.popMatrix();
+    planet.pop();
     //End main planet
 
     //Rings (front)
     //(size*ringSizeFactor = original input size.
     if (rings) {
-        planet.pushMatrix();
+        planet.push();
         planet.translate((size*ringSizeFactor/2),(size*ringSizeFactor/2));
         planet.rotate(ringRotation);
 
@@ -400,11 +400,11 @@ function createPlanet(size,color1,color2,rings,ringColor1,ringColor2,ringSizeFac
             planet.arc(0,0,size*ringSizeFactor-5-i*2,(size*ringSizeFactor-i*2)/ringTilt,0,3.2);
         }
 
-        planet.popMatrix();
+        planet.pop();
     }
     //End rings
 
-    return planet.get();
+    return planet;
 };//updated for transparency
 function randomColor(baseColor,toneVariation,valueVariation) {
     var tone = [random(-toneVariation,toneVariation),random(-toneVariation,toneVariation),random(-toneVariation,toneVariation)];
@@ -455,11 +455,11 @@ function createRandomPlanet(size) {
 
 /**Galaxy generation Code**/
 function generateRoundStar(starSize,starColor,randomAmount) {
-    var star = createGraphics(starSize+40,starSize+40,JAVA2D);//added 40 to offset scale difference with other star!
+    var star = createGraphics(starSize+40,starSize+40);//added 40 to offset scale difference with other star!
 
     star.background(0, 0, 0, 0);
 
-    star.pushMatrix();
+    star.push();
     star.translate(starSize/2+20,starSize/2+20);//added 20 to offset scale difference with other star!
 
     for (var i = 0; i < 25; i ++) {
@@ -468,15 +468,15 @@ function generateRoundStar(starSize,starColor,randomAmount) {
         star.ellipse(0,0,random(2,starSize),random(2,starSize));
     }
 
-    star.popMatrix();
-    return star.get();
+    star.pop();
+    return star;
 };
 function generateGlowStar(starSize,starColor,randomAmount,glowAmount,resolution,glowStrength) {
-    var star = createGraphics(starSize+glowAmount*2,starSize+glowAmount*2,JAVA2D);
+    var star = createGraphics(starSize+glowAmount*2,starSize+glowAmount*2);
 
     star.background(0, 0, 0, 0);
 
-    star.pushMatrix();
+    star.push();
     star.translate(starSize/2+glowAmount,starSize/2+glowAmount);
 
     for (var i = 0; i < resolution; i ++) {
@@ -488,19 +488,19 @@ function generateGlowStar(starSize,starColor,randomAmount,glowAmount,resolution,
         star.ellipse(0-(i/resolution)*starSize/4,0-(i/resolution)*starSize/4,starSize-i*(starSize/resolution),starSize-i*(starSize/resolution));//main star
     }
 
-    star.popMatrix();
-    return star.get();
+    star.pop();
+    return star;
 };
 function generateSpiral(w,h,col,border,starSize,spiralEnd,starGap,randomAmount,rotation) {
-    var spiral = createGraphics(w+border*2,h+border*2,JAVA2D);
+    var spiral = createGraphics(w+border*2,h+border*2);
 
     spiral.background(0,0,0,0);
 
     var edgeColor = [15,79,231];
 
-    //new PVector(cos(i)*(r+bump),sin(i)*(r+bump))
+    //createVector(cos(i)*(r+bump),sin(i)*(r+bump))
 
-    spiral.pushMatrix();
+    spiral.push();
     spiral.translate(w/2+border,h/2+border);
     spiral.rotate(rotation);
 
@@ -519,9 +519,9 @@ function generateSpiral(w,h,col,border,starSize,spiralEnd,starGap,randomAmount,r
     }
     spiral.colorMode(RGB);
 
-    spiral.popMatrix();
+    spiral.pop();
 
-    return spiral.get();
+    return spiral;
 };
 /**End galaxy generation Code**/
 
@@ -535,13 +535,13 @@ function displayPlanets() {
         xPos = (cos(planet.orbitAngle)*planet.orbitRadius)+(width/2);
         yPos = (sin(planet.orbitAngle)*planet.orbitRadius)+(height/2);
         /*
-        pushMatrix();
+        push();
             translate(width/2,height/2);
             rotate(planet.orbitAngle);
             //translate(planet.orbitRadius,0);
             scale(0.1,0.1);
             image(planet.planetImage, planet.orbitRadius*10, 0);
-        popMatrix();
+        pop();
         */
         //Display planet orbits
         /*
@@ -637,12 +637,12 @@ function draw() {
     background(5, 21, 36);
 
     /*if (galaxyImage === "none") {
-        var galaxyBuffer = createGraphics(width,height,JAVA2D);
+        var galaxyBuffer = createGraphics(width,height);
         galaxyBuffer.background(0,0,0,0);
         galaxyBuffer.image(generateSpiral(400,400,[254,207,245],50,14,1000,0.5,20,random(0,8)),0,0);
         galaxyBuffer.image(generateSpiral(400,400,[158,154,296],50,18,1000,0.5,20,random(0,8)),0,0);
         galaxyBuffer.image(generateSpiral(400,400,[260,118,175],50,20,1000,0.5,20,random(0,8)),0,0);
-        galaxyImage = galaxyBuffer.get();
+        galaxyImage = galaxyBuffer;
         return;
     }*/
 
@@ -674,13 +674,13 @@ function draw() {
             text("Generating planet thumbnail", width/2, height/2+60);
             //planetThumbnailBuffer = createPlanet(randomPlanet.size/5,randomPlanet.baseColor,randomPlanet.highlightColor,round(random(0,1)),randomPlanet.ringColor,randomPlanet.ringHighlightColor,2,random(5,50),[1,6]);
             //planetThumbnailBuffer = randomPlanet.image;
-            var thumbnailBuffer = createGraphics(randomPlanet.size/4+2,randomPlanet.size/4+2,JAVA2D);
-            thumbnailBuffer.pushMatrix();
+            var thumbnailBuffer = createGraphics(randomPlanet.size/4+2,randomPlanet.size/4+2);
+            thumbnailBuffer.push();
             thumbnailBuffer.scale(0.25);
             thumbnailBuffer.background(0,0,0,0);
             thumbnailBuffer.image(planetImageBuffer,1,1);
-            thumbnailBuffer.popMatrix();
-            planetThumbnailBuffer = thumbnailBuffer.get();
+            thumbnailBuffer.pop();
+            planetThumbnailBuffer = thumbnailBuffer;
             return;
         }
         else if (planetMineralBuffer === "empty") {
