@@ -6,8 +6,6 @@
 /**THIS IS VERSION 1.6**///if you want to know how this game looked in the bigging here is the first version I have:
 //https://www.khanacademy.org/cs/eat-the-seed-the-first-version-of-bird-bait-ever/5440883783106560
 
-//Want music with this game? Listen to some awesome music by The Slanted Room at this link: https://www.youtube.com/playlist?list=PLN0UZhoo3WErLNVQXXrxGez5Pa5sgDbyJ
-
 /**If you would like to be notified about new game releases comment in my tips and thanks "notify me" section.**/
 
 //I am just a normal kid. I started learning programming not that long ago so I am still learning too. When I find something cool out I usually make a tutorial showing you how to do it. Lately I have been working on figuring out collision between different types of objects. Go on my recent programs and check those out. I am developping new games so that is why updates for this are not coming quite so quick. I am learning just like the rest of you. Thank you to Khan Academy for giving us this awesome oportunity.

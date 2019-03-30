@@ -27,12 +27,16 @@ $(document).ready(function(){
     console.log(currentSlide);
     console.log(nextSlide);
   });
-  $.ajax({
-    url: 'js/balloon_popper.js',
-    dataType: 'text',
-    success: function(data) {
-      $('.code').text(data);
-    }
+  $('.code').each(function() {
+    var file = $(this).attr("data-src");
+    var element = $(this);
+    $.ajax({
+      url: file,
+      dataType: 'text',
+      success: function(data) {
+        element.text(data);
+      }
+    });
   });
   //Only load the code prettifier after the content is read.
   prettify = document.createElement("script");
