@@ -799,6 +799,7 @@ function drawHelp() {
             strokeWeight(2);
             line (width/2-145,height/2-75,width/2-145,height/2+10);
             line (width/2-145,height/2+11,width/2-5,height/2+11);
+            noStroke();
             textAlign(CENTER,TOP);
             text ("Both citizens and enemies move in a completely predictable pattern. There is no randomeness. Your goal is to guide the citizens to the exit (the green brick), without letting an enemy touch them.",width/2-150,height/2+50,300,200);
         break;

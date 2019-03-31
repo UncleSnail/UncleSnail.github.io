@@ -551,6 +551,7 @@ function drawmenu() {
             fill (168, 134, 92);
             textAlign(LEFT,BASELINE);
             textSize(60);
+            noStroke();
             text ("BIRD      BAIT",5,80);
             textAlign(CENTER,BASELINE);
             owl(0,-140);
@@ -668,6 +669,7 @@ function drawmenu() {
                 rect(25,25,150,150);
                 textSize(15);
                 fill(0, 0, 0);
+                noStroke();
                 text("This bird is your\nfriend. It loves seeds\nand this can come\nin handy when leading\nit away from danger.",30,45);
             }
             if (mouseX>175&&mouseX<225&&mouseY>75&&mouseY<125){
@@ -676,6 +678,7 @@ function drawmenu() {
                 rect(125,25,150,150);
                 textSize(15);
                 fill(0, 0, 0);
+                noStroke();
                 text("This bird is a robin.\nIt is a nice bird but it\ntoo likes seeds. It has\nno interest in hurting\nyour bird, however, if\nit eats the seed you\nhave nothing to lead\nyour bird with.",130,45);
             }
             if (mouseX>275&&mouseX<325&&mouseY>75&&mouseY<125){
@@ -684,6 +687,7 @@ function drawmenu() {
                 rect(225,25,150,150);
                 textSize(15);
                 fill(0, 0, 0);
+                noStroke();
                 text("This is a hawk.\n(despite it's strange\nlooks.) It hunts other\nsmall birds and you\nmust be careful to\nstay away. But hawks\ndon't like seeds so\nthat's good.",230,45);
             }
             if (mouseX>75&&mouseX<125&&mouseY>225&&mouseY<275){
@@ -692,6 +696,7 @@ function drawmenu() {
                 rect(25,185,150,150);
                 textSize(15);
                 fill(0, 0, 0);
+                noStroke();
                 text("This is a seagull. He\nseems to always\nhave diarrhea and is\nusully pooping every-\nwhere. Oh, and his\npoop is very acidic so\nbe careful!     Ps.\nHe also likes seeds.",30,200);
             }
             if (mouseX>275&&mouseX<325&&mouseY>225&&mouseY<275){
@@ -700,6 +705,7 @@ function drawmenu() {
                 rect(225,185,152,150);
                 textSize(15);
                 fill(0, 0, 0);
+                noStroke();
                 text("Say hi to the frog.\nDon't worry about him.\nHe just hops along the\nbottom of the screen.\nOh, wait, if he hits you\nhe grabs on and\nweighs you down.",230,200);
             }
             if (mouseX>175&&mouseX<225&&mouseY>225&&mouseY<275){
@@ -708,6 +714,7 @@ function drawmenu() {
                 rect(125,185,150,150);
                 textSize(15);
                 fill(0, 0, 0);
+                noStroke();
                 text("See that fisher bird?\nHe will try to bait your\nbird to his hook. You\nmust get another bird\nto eat the bait before\nyour bird is caught. If\nhe hooks your bird,\nfeed him your seed.\n",130,200);
                 textSize(10);
                 text("(you will not lose health.)",130,330);
@@ -734,6 +741,7 @@ function drawmenu() {
                 rect(25,25,350,110);
                 textSize(15);
                 fill(0, 0, 0);
+                noStroke();
                 text("He will move towards that thing.          It is a seed.",30,45);
                 you(100,80,0,0);
                 stroke (0, 0, 0);
@@ -755,6 +763,7 @@ function drawmenu() {
                 rect(125,75,150,150);
                 textSize(15);
                 fill(0, 0, 0);
+                noStroke();
                 text("This is you.",165,110);
                 you(200,150,0,0);
 
@@ -766,6 +775,7 @@ function drawmenu() {
                 textSize(15);
                 fill(0, 0, 0);
                 textAlign(RIGHT,BASELINE);
+                noStroke();
                 text("Your bird will eat\nyour seed if it\ngets too close.\nKeep your bird\naway from\nhawks.",370,150);
                 textAlign(LEFT,BASELINE);
                 you(100,165,0,5);
@@ -801,6 +811,7 @@ function drawmenu() {
             rect(150,325,100,50,20);
             textSize(30);
             fill (0, 0, 0);
+            noStroke();
             text("MENU",155,360);
             textSize(30);
             textAlign(CENTER,CENTER);
@@ -839,6 +850,7 @@ function drawmenu() {
         fill (255);
         textAlign (CENTER,TOP);
         textSize(30);
+        noStroke();
         text ("Pick a Bird",200,84+x);
         fill(41, 94, 42,220);
         rect (25,240+x,350,150,30);
@@ -918,6 +930,7 @@ function drawmenu() {
         fill (125, 201, 255);
         textSize (30);
         fill (255);
+        noStroke();
         text ("Pick a Level",200,50);
         fill (0,0,0,240);
         rect (20,300,360,90,20);
@@ -1047,6 +1060,7 @@ function winscreen() {
         rect (150,300,100,50,20);
         fill (175, 230, 222);
         textSize(30);
+        noStroke();
         text("MENU",155,338);
         textSize(25);
         fill (255);
@@ -1074,6 +1088,7 @@ function pausemenu() {
         rect (140,245,120,50,20);
         fill (175, 230, 222);
         textSize(30);
+        noStroke();
         text("PLAY",200,338);
         text("RETRY",200,280);
         textSize(25);

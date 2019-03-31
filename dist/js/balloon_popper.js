@@ -127,6 +127,7 @@ function draw() {
         }
     }
     fill (0, 0, 0);
+    noStroke();
     text("There are curently "+balloons.length+" balloons",1,10);
     text("You have popped "+popCount+" balloons",1,20);
 

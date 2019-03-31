@@ -651,11 +651,11 @@ function draw() {
         textAlign(CENTER,CENTER);
         textSize(12);
         fill (252, 252, 252);
+        noStroke();
         text("loading, please wait, this may take a while...",width/2,height/2);
         fill (186, 182, 186);
         textSize(10);
         text("If it isn't finished after a minute, please let me know in the tips and thanks, so I can try to find a solution.",width/2-150,height/2+100,300,100);
-        noStroke();
         fill (4, 15, 26);
         rect (width/2-100,height/2+20,200,20);
         fill (174, 170, 247);
@@ -726,6 +726,7 @@ function draw() {
         fill(255);
         textAlign(CENTER,BASELINE);
         textSize(12);
+        noStroke();
         text("Click to view planet info.",width/2,height-5);
     }
 };
