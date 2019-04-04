@@ -6,6 +6,7 @@
 // The block colors also had to be converted to work with RGB
 
 
+var paused = false;
 var load = 'none';
 /*
  * A game by Uncle Snail
@@ -840,6 +841,15 @@ function drawHelp() {
     */
 };
 
+function drawMouseNotice() {
+    textSize(12);
+    fill(0);
+    rect(50, 100, width-100, height-200);
+    fill (176, 171, 166);
+    textAlign(CENTER);
+    text("Hover mouse pointer over the canvas\nto interact using the keyboard.",width/2,height/2);
+}
+
 function checkBlock(char,side) {//side = CreateVector
     if (side===undefined) {
         //make the position and direction into a number, to avoid the stupid error.
@@ -1413,7 +1423,12 @@ function drawHud() {
     text ("Level scores:",width/2,height-25);
 };
 
+function overCanvas(){
+  return mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height;
+}
+
 function keyReleased() {
+  if (overCanvas()) {
     if ((keyCode === 67 || keyCode === 191)&&gameSpeed<20) {//C (can reseset speed even if you are not in a level.
         gameSpeed = 3;
         frameRate(gameSpeed);
@@ -1540,14 +1555,29 @@ function keyReleased() {
         background(36, 28, 22);
         drawHelp();
     }
+  }
+  else {
+    drawMouseNotice();
+  }
 };
 
 // Prevent key stealing
 function keyPressed() {
-  // Only block keys used by this program.
-  //if (keyCode === 27 || keyCode === 32 || keyCode === 67 || keyCode === 88 || keyCode === 90 || keyCode === 13 || keyCode===ENTER || keyCode===RETURN){
+  // Only block keys if the moust is on the canvas
+  if (overCanvas()) {
     return false;
-  //}
+  }
+}
+function mouseMoved() {
+  // If the mouse is over the canvas or the game is not loaded.
+  if (overCanvas() && paused) {
+    loop();
+    paused = false;
+  }
+  if (loadImageNum>=blocks.length && !overCanvas() && !paused) {
+    noLoop();
+    paused = true;
+  }
 }
 
 /*
