@@ -45,4 +45,8 @@ $(document).ready(function(){
   prettify = document.createElement("script");
   prettify.src = "https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js";
   $('head').append(prettify);
+  lineNumbers = document.createElement("style");
+  lineNumbers.innerHTML = '.linenums li {list-style-type: decimal;background: #fff;}';
+  //Appended to the body so that it is after the style automattically appended by prettify.
+  $('body').append(lineNumbers);
 });
