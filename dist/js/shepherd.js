@@ -4,6 +4,7 @@
 // The sounds were removed because I do not have the rights to the audio files.
 // The key pressing behavior was also editted to enable proper embedding and functionality.
 // The block colors also had to be converted to work with RGB
+// Removed extra comments to help improve webpage performance.
 
 
 var paused = false;
@@ -19,7 +20,6 @@ var load = 'none';
 */
 
 
-
  //Paste load
 /**Paste your load game text here.**/
  //Paste load
@@ -27,18 +27,7 @@ var load = 'none';
 /**Note, the save game function may not work properly at the moment. I will try to get that fixed. For now, your game should load properly, but it may not.**/
 
 
-
-
-//Open these brackets for info about the program, and plans for the future.
 /*
-    I hope to be updating this regularly for a while, as it is not quite in a final state I would like it to be in.
-    My plans are to add more levels, and a few new features. I already have a bunch of new blocks and interesting things that are ready, but I have not integrated into a level yet, so those should come out soon.
-    I plan to add these features in particular
-    *Stabalize point system, to make sure there are no bugs.
-    *More levels
-    *More block types.
-    *Add my high scores to the top, so you can see if you beat them.
-
 Don't worry if you save your game that it won't be compatiable with a later version. I have a built in  compatability system, so even if more things are added, it will convert your saved game to the new format on load. If it doesn't load, just let me know.
 
  FULL LIST OF CONTROLS
@@ -351,77 +340,6 @@ var levels = [
 [12,12,12,12,12,12,12,12,12,12,12,12,12,12,12]
 ]
 ];
-/*
-[12,12,12,12,12,12,12,12,12,12,12,12,12,12,12],
-[12,0,0,0,0,0,0,0,0,0,0,0,0,0,12],
-[12,0,0,0,0,0,0,0,0,0,0,0,0,0,12],
-[12,0,0,0,0,0,0,0,0,0,0,0,0,0,12],
-[12,0,0,0,0,0,0,0,0,0,0,0,0,0,12],
-[12,0,0,0,0,0,0,0,0,0,0,0,0,0,12],
-[12,0,0,0,0,0,0,0,0,0,0,0,0,0,12],
-[12,0,0,0,0,0,0,0,0,0,0,0,0,0,12],
-[12,0,0,0,0,0,0,0,0,0,0,0,0,0,12],
-[12,0,0,0,0,0,0,0,0,0,0,0,0,0,12],
-[12,0,0,0,0,0,0,0,0,0,0,0,0,0,12],
-[12,0,0,0,0,0,0,0,0,0,0,0,0,0,12],
-[12,0,0,0,0,0,0,0,0,0,0,0,0,0,12],
-[12,0,0,0,0,0,0,0,0,0,0,0,0,0,12],
-[12,12,12,12,12,12,12,12,12,12,12,12,12,12,12]
-*/
-/*
-
-[
-[12,12,12,12,12,12,12,12,12,12,12,12,12,12,12],
-[12,0,0,0,0,0,2,0,2,0,0,0,4,0,12],
-[12,0,7,0,2,0,2,0,2,0,0,0,0,0,12],
-[12,0,0,0,1,0,4,0,1,0,4,0,0,0,12],
-[12,0,0,0,2,0,2,0,2,0,0,2,0,0,12],
-[12,0,0,0,4,0,2,0,4,0,0,0,0,0,12],
-[12,2,2,2,4,0,0,0,4,0,4,2,2,2,12],
-[12,18,1,1,1,2,2,0,2,2,0,0,0,11,12],
-[12,2,19,0,0,2,1,0,1,2,0,0,0,2,12],
-[12,0,0,0,0,2,1,0,1,2,0,0,0,0,12],
-[12,0,0,0,2,0,4,0,4,0,2,0,0,0,12],
-[12,0,0,0,0,2,0,4,0,2,0,0,0,0,12],
-[12,2,0,0,0,0,0,0,0,0,0,0,0,2,12],
-[12,0,0,2,0,0,0,0,0,0,0,2,0,0,12],
-[12,12,12,12,12,12,12,12,12,12,12,12,12,12,12]
-],
-[
-[11,11,11,11,11,11,11,11,11,11,11,11,11,11,11],
-[11,17,0,18,0,0,0,0,0,0,0,12,17,0,11],
-[11,0,2,0,0,12,0,0,0,0,0,0,0,0,11],
-[11,0,0,5,5,5,0,0,0,0,0,0,0,0,11],
-[11,0,0,4,4,1,1,0,0,0,0,0,0,0,11],
-[11,0,4,1,1,1,1,0,0,16,0,0,0,0,11],
-[11,0,1,1,1,1,1,0,4,0,0,0,0,0,11],
-[11,0,1,1,1,1,1,4,0,4,0,0,0,0,11],
-[11,3,1,1,1,1,1,4,0,0,0,3,0,0,11],
-[11,3,3,1,1,1,1,0,0,0,3,0,0,0,11],
-[11,0,1,1,1,1,1,2,2,2,0,3,2,0,11],
-[11,0,1,1,1,0,0,0,0,2,0,2,0,0,11],
-[11,0,0,0,0,0,0,0,0,0,2,0,0,0,11],
-[11,2,0,0,0,0,0,0,0,0,0,0,0,0,11],
-[11,10,11,11,11,11,11,11,11,11,11,11,11,11,11]
-]
-*/
-/*
-[12,12,12,12,12,12,12,12,12,12,12,12,12,12,12],
-[12,0,0,0,2,0,0,0,0,0,1,0,0,0,12],
-[12,0,0,0,0,0,0,0,0,1,0,1,0,0,12],
-[12,0,0,0,0,0,0,2,4,0,4,1,2,2,12],
-[12,2,2,0,0,2,2,0,1,2,2,2,1,0,12],
-[12,6,2,0,0,2,0,0,1,1,1,1,4,1,12],
-[12,0,2,0,0,0,0,0,2,2,6,0,4,0,12],
-[12,5,2,2,4,2,2,2,0,0,0,0,2,0,12],
-[12,5,0,2,0,0,0,2,0,2,2,2,2,5,12],
-[12,2,0,2,2,2,0,2,0,0,0,0,0,0,12],
-[12,6,0,0,2,2,5,2,2,2,2,2,2,0,12],
-[12,2,6,2,0,1,0,4,0,0,0,0,0,0,12],
-[12,0,0,0,0,2,0,2,0,0,6,2,0,2,12],
-[12,0,2,2,6,2,0,0,0,6,6,2,2,2,12],
-[12,12,12,12,12,12,12,12,12,12,12,12,12,12,12]
-*/
 var chars = [];
 var blx = [];
 
@@ -447,59 +365,6 @@ var curLevel = 0;
 
 //load game
 function loadGame() {
-    /*
-    if (load[0]<1.03&&load.length===18) {
-        if (load.length===18) {
-            for (var i = 1; i < load.length-13; i ++) {//start after the version of the game this is. (so that I can convert the format if necessary, from an older version of the game.
-                levelScores[i-1][0]=load[i][0];
-                levelScores[i-1][1]=load[i][1];
-                levelScores[i-1][2]=load[i][2];
-            }
-            bestScores[0] = load[load.length-13];
-            bestScores[1] = load[load.length-12];
-            bestScores[2] = load[load.length-11];
-        }
-        else {
-            for (var i = 1; i < load.length-8; i ++) {//start after the version of the game this is. (so that I can convert the format if necessary, from an older version of the game.
-                levelScores[i-1][0]=load[i][0];
-                levelScores[i-1][1]=load[i][1];
-                levelScores[i-1][2]=load[i][2];
-            }
-            bestScores[0] = load[load.length-10];
-            bestScores[1] = load[load.length-9];
-            bestScores[2] = load[load.length-8];
-        }
-        totalPoints = load[load.length-7];
-        roundCitizens = load[load.length-6];
-        roundPoints = load[load.length-5];
-        totalCitizens = load[load.length-4];
-        curLevel = load[load.length-3];
-        points = load[load.length-2];
-        turns = load[load.length-1];
-    }
-    else {
-        for (var i = 1; i < load.length-8; i ++) {//start after the version of the game this is. (so that I can convert the format if necessary, from an older version of the game.
-            levelScores[i-1][0]=load[i][0];
-            levelScores[i-1][1]=load[i][1];
-            levelScores[i-1][2]=load[i][2];
-        }
-        bestScores[0] = load[load.length-8][0];
-        bestScores[1] = load[load.length-8][1];
-        bestScores[2] = load[load.length-8][2];
-        totalPoints = load[load.length-7];
-        roundCitizens = load[load.length-6];
-        roundPoints = load[load.length-5];
-        totalCitizens = load[load.length-4];
-        curLevel = load[load.length-3];
-        points = load[load.length-2];
-        if (load[load.length-1]==="NaN") {
-            turns = 100;
-        }
-        else {
-            turns = load[load.length-1];
-        }
-    }
-    */
     //temp load fix.
     for (var i = 1; i < levels.length+1; i ++) {//start after the version of the game this is. (so that I can convert the format if necessary, from an older version of the game.
         levelScores[i-1][0]=load[i][0];
@@ -566,14 +431,6 @@ function saveGame() {
     print ("load = ["+gameVersion+","+saveOutput+","+totalPoints+","+roundCitizens+","+roundPoints+","+totalPoints+","+roundCitizens+","+roundPoints+","+totalCitizens+","+curLevel+","+points+","+(turns-10)+"];");
 };
 
-//load graphics
-// OLD LOADPIX
-/*var loadPix = function (i) {
-    return pixelsToImage(blocks[i].pixels,pixSize,10,10);
-};*/
-/*var loadPix = function (blocks,i) {
-    return pixelsToImage(blocks[i].pixels,pixSize,10,10);
-};*/
 var blockPix = [];
 //load arrow pictures
 var arrows = [
@@ -816,29 +673,6 @@ function drawHelp() {
     }
     textAlign(CENTER,BOTTOM);
     text ("Use the arrow keys to continue.",width/2,height/2+190);
-    /*
-    image(blockPix[18],width/2-175,height/2-200);
-    image(blockPix[11],width/2-175,height/2-150);
-    image(blockPix[13],width/2-175,height/2-100);
-    image(blockPix[4],width/2-175,height/2-50);
-    image(blockPix[0],width/2-175,height/2);
-    image(blockPix[1],width/2-175,height/2+50);
-    image(blockPix[2],width/2-175,height/2+100);
-    image(blockPix[19],width/2-175,height/2+150);
-
-    textSize(10);
-    textAlign(LEFT,TOP);
-    fill (176, 171, 166);
-    text ("This is a citizen. They innocently walk around\nthe map. Your goal is to guid them to the exit\nwithout getting them killed, or running out of turns.",width/2-150,height/2-200);
-    text ("That there is the exit. Try to make citizens walk into it.\nCitizens aren't as smart as you are, so you must make\nthem walk directly in. They won't see it a enter by themselves.\nJust make sure you don't let any destructive creatures in.",width/2-150,height/2-160);
-    text ("This is an enemy, a destructive creature. He will move\njust like a citizen will, which is completely predictable\n(there is no random whatsoever). You can guide him away from\nthe citizens, and if you don't, when he touches one, he will\neat the poor little fellow.",width/2-150,height/2-108);
-    text ("This is a box. You can push these around. Feel\nfree to use them to block enemies, or guid\ncitizens. Just make sure you don't try to push more than\none at the same time, you're not strong enough.",width/2-150,height/2-50);
-    text ("This is the ground........ Not much interesting\nhere. It's just there. Everyone can walk on it,\nand whatsoever. You can push blocks on it, and it will\nstill be there till the end of the world.",width/2-150,height/2);
-    text ("This is a water block. Don't worry though, you\nand everyone else can swim, and it won't even\nslow you down. However, you can push blocks over water,\nso don't even try it, they won't go.",width/2-150,height/2+50);
-    text ("This is stone. It is the typical block. It just\nhangs out, sits around, and gets in your way. At\nleast the hungry monsters I showed you earlier have\nto go around it.",width/2-150,height/2+100);
-    text ("And, finally.... This is you. Use your arrow\nkeys to move. You can not be killed by enemies.",width/2-150,height/2+150);
-    text ("I could tell you more, but that wouldn't be any fun... So you'll just\nhave to figure the rest out for yourself. (Press space to continue.)",width/2-150,height/2+175);
-    */
 };
 
 function drawMouseNotice() {
@@ -852,17 +686,6 @@ function drawMouseNotice() {
 
 function checkBlock(char,side) {//side = CreateVector
     if (side===undefined) {
-        //make the position and direction into a number, to avoid the stupid error.
-        /*char.pos.x-=1;
-        char.pos.x+=1;
-        char.pos.y-=1;
-        char.pos.y+=1;
-        print(char.type);
-        print(char);
-        print(char.pos);
-        print(char.dir);
-        print(char.pos.y+char.dir.y);
-        print(char.pos.x+char.dir.x);*/
         return blx[char.pos.y+char.dir.y][char.pos.x+char.dir.x];
     }
     else {
@@ -917,41 +740,6 @@ function moveCheck(i) {
         return false;
     }
 };//stablish (seeming)
-/*
-var moveChar = function (char,level,side) {
-        activeBlocks[char.position.y+char.dir.y][char.position.x+char.dir.x] = char;
-        activeBlocks[char.position[0]][char.position[1]] = {
-            pix: 0,
-            strength: 0,
-            type: "dirt",
-            dir: createVector(0,0),
-            position: [char.position[0],char.position[1]]
-        };
-};
-*/
-
-
-/*var actionChar = function () {
-    for (var i = 0; i < activeBlocks.length; i++) {
-        for (var j = 0; j < activeBlocks[i].length; j ++) {
-            var char = activeBlocks[i][j];
-            if (char.pix>1) {
-                if (moveChar(char,activeBlocks)) {
-                    moveChar(char,activeBlocks);
-                    continue;
-                }
-                switch (char.type) {
-                    case "citizen":
-                        if (checkBlock(char,activeBlocks).pix<1){
-
-                        }
-
-                    break;
-                }
-            }
-        }
-    }
-};*/
 
 function resetLevel() {
     //levelScores;
@@ -987,18 +775,6 @@ function checkForCitizens() {
     }
     if (citizensLeft===false) {
         gameState = "next";
-        /*setScores();
-        if (curLevel<levels.length-1) {
-
-        }
-        else {
-            curLevel = 0;
-            roundCitizens = 0;
-            roundPoints =0;
-            turns = 100;
-        }
-        resetLevel();
-        return;*/
     }
     //check if there are still citizens
 };
@@ -1025,13 +801,6 @@ function throughExit(i) {
 
 function moveChar(i,wait,go) {
     //if goes through exit.
-    /*if (chars[i].type==='rock'){
-        //check rock
-        //print(chars[i].pos.y);
-        //print(chars[i].dir.y);
-        print(checkBlock(chars[i]));
-        return;
-    }*/
     if (chars[i].pos.x+chars[i].dir.x>=levels[curLevel][0].length||chars[i].pos.y+chars[i].dir.y>=levels[curLevel].length||chars[i].pos.x+chars[i].dir.x<0||chars[i].pos.y+chars[i].dir.y<0) {//if out through a hole.
         //print(chars[i].type +": Through exit");
         throughExit(i);
@@ -1124,14 +893,6 @@ function moveChar(i,wait,go) {
                             dir: createVector(1,0),
                             pos: createVector((f-1)+1,(j-1)+1)
                         });
-                    /*chars[i].pos.x-=1;
-                    chars[i].pos.x+=1;
-                    chars[i].pos.y-=1;
-                    chars[i].pos.y+=1;
-                    chars[i].dir.x-=1;
-                    chars[i].dir.x+=1;
-                    chars[i].dir.y-=1;
-                    chars[i].dir.y+=1;*/
                 blx[chars[i].pos.y+chars[i].dir.y][chars[i].pos.x+chars[i].dir.x] = {
                     pix: 2,
                     strength: blocks[2].strength,
@@ -1144,17 +905,6 @@ function moveChar(i,wait,go) {
                     type: blocks[2].name,
                     walkable: blocks[2].walkable
                 };
-                /*print(chars[2].dir);
-                print(chars[2].pos);
-                print(chars[1].dir);
-                print(chars[1].pos);
-                print(chars[0].dir);
-                print(chars[0].pos);
-                //print(checkBlock(chars[2]));
-                print(checkBlock(chars[1]));
-                print(checkBlock(chars[0]));
-                print(blx[f+1][j]);
-                chars.splice(i,1);*/
                 }
             }
         }
@@ -1279,12 +1029,6 @@ function moveChar(i,wait,go) {
     if (go === "turn") {
         moveCheck(i);
     }
-    /*if (chars[i].type==='rock'){
-    print("turn "+curTurns+".2");
-    print(chars[i].pos.x+chars[i].dir.x);
-    print(chars[i].pos.x);
-    print(levels[curLevel][0].length);
-    }*/
 };
 
 function moveYou(dir) {
@@ -1580,14 +1324,6 @@ function mouseMoved() {
   }
 }
 
-/*
-//                     PAY ATTENTION!
-background(64, 47, 35);
-drawMap(blx,chars);
-
-frameRate(1);
-//                     PAY ATTENTION!
-*/
 var loadImageNum = 0;
 function draw() {
     if (loadImageNum<blocks.length) {
@@ -1612,10 +1348,6 @@ function draw() {
         loadImageNum+=1;
         return;
     }
-    /*if (blockPix.length<blocks.length) {
-        blockPix.push(loadPix(blocks,blockPix.length));
-        return;
-    }*/
     background(36, 28, 22);
     if (gameState === 'next') {
         drawNext();
@@ -1639,20 +1371,6 @@ function draw() {
         drawHud();
     }
     if (gameState === 'pick') {
-        //var font = createFont("ariel");
-        //fill (110, 106, 100);
-        //textFont(font);
-        //textSize(40);
-        //textAlign(CENTER,TOP);
-        //text ("Shepherd",200,10);
         image (pixelsToImage(blocks[18].pixels,10,10,10),width/2-50,height/2-50);
-        //textAlign(CENTER,BOTTOM);
-        //text ("The Game",200,390);
     }
-    //fill (255, 0, 0);
-    //text (keyCode,200,200);
-    //moveYou();
-    //image(blockPix[you.pix],you.pos.x*10*pixSize,you.pos.y*10*pixSize);//draw you
-    //text (levels.length,50,50);
-    //text (curLevel,50,25);
 };

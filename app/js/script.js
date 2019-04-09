@@ -9,7 +9,6 @@ $(document).ready(function(){
   $('.carousel-pages').slick({
     // Prevent key stealing from P5.JS
     accessibility: false,
-    lazyLoad: 'ondemand',
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
@@ -26,6 +25,8 @@ $(document).ready(function(){
     focusOnSelect: true
   });
   $('.carousel-nav').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    $('.carousel-pages .carousel-page').eq(currentSlide).find('.app-wrapper').css("background-color", "#FFF");
+    $('.carousel-pages .carousel-page').eq(nextSlide).find('.app-wrapper').css("background-color", "#111");
     console.log(currentSlide);
     console.log(nextSlide);
   });

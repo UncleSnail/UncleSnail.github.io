@@ -30,6 +30,12 @@ section {
 }
 
 //Other classes
+
+.app-wrapper {
+  width: 400px;
+  height: 400px;
+}
+
 %wave {
   position: relative;
   &::before {
@@ -111,9 +117,6 @@ section {
   justify-content: center;
   align-items: center;
   align-content: center;
-  div {
-    flex: 1;
-  }
   @include respond-to (small) {
     flex-direction: column;
     div {
