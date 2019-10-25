@@ -1,9 +1,9 @@
 // Ported by Caleb Marcoux from my original program on Khan Academy.
 // https://www.khanacademy.org/computer-programming/shepherd-the-game-v-106/5073448501903360
 // To preserve authenticity, as little code as possible was changed.
-// The sounds were removed because I do not have the rights to the audio files.
+// The sounds were removed because I do not have the rights to copy the audio files here.
 // The key pressing behavior was also editted to enable proper embedding and functionality.
-// The block colors also had to be converted to work with RGB
+// The block colors also had to be converted to work with RGB.
 // Removed extra comments to help improve webpage performance.
 
 
