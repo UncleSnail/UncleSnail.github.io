@@ -24,17 +24,6 @@ $(document).ready(function(){
     centerMode: true,
     focusOnSelect: true
   });
-  // Use -1 because the first slide is not an app wrapper.
-  $('.carousel-nav').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-    if (currentSlide != 0) {
-      window.frames[currentSlide-1].noLoop();
-    }
-    if (nextSlide != 0) {
-      window.frames[nextSlide-1].loop();
-    }
-    console.log(currentSlide);
-    console.log(nextSlide);
-  });
   $('.code').each(function() {
     var file = $(this).attr("data-src");
     var element = $(this);
@@ -54,4 +43,18 @@ $(document).ready(function(){
   lineNumbers.innerHTML = '.linenums li {list-style-type: decimal;background: #fff;}ol.linenums {padding-left: 57px;}pre{white-space: pre-wrap;}';
   //Appended to the body so that it is after the style automattically appended by prettify.
   $('body').append(lineNumbers);
+});
+
+$(window).on("load", function() {
+  // Use -1 because the first slide is not an app wrapper.
+  $('.carousel-nav').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    if (currentSlide != 0) {
+      window.frames[currentSlide-1].noLoop();
+    }
+    if (nextSlide != 0) {
+      window.frames[nextSlide-1].loop();
+    }
+    console.log(currentSlide);
+    console.log(nextSlide);
+  });
 });
