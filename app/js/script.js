@@ -24,9 +24,14 @@ $(document).ready(function(){
     centerMode: true,
     focusOnSelect: true
   });
+  // Use -1 because the first slide is not an app wrapper.
   $('.carousel-nav').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-    $('.carousel-pages .carousel-page').eq(currentSlide).find('.app-wrapper').css("background-color", "#FFF");
-    $('.carousel-pages .carousel-page').eq(nextSlide).find('.app-wrapper').css("background-color", "#111");
+    if (currentSlide != 0) {
+      window.frames[currentSlide-1].noLoop();
+    }
+    if (nextSlide != 0) {
+      window.frames[nextSlide-1].loop();
+    }
     console.log(currentSlide);
     console.log(nextSlide);
   });
