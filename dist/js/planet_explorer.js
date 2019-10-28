@@ -75,6 +75,7 @@ function setup(){
   planetThumbnailBuffer = "empty";
   planetMineralBuffer = "empty";
   randomPlanet;
+  noLoop();
 }
 
 function generateName(strings, beginning, middle, end) {

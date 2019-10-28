@@ -36,6 +36,7 @@ function setup() {
   bx3 = 0;
   r = random (100,400);
   bspeed = 3;
+  noLoop();
 }
 
 function backdrop() {

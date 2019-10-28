@@ -155,6 +155,7 @@ function setup() {
   dotsize = 15;
   keyPressed = function () {keys[keyCode]=true;};
   keyReleased = function () {keys [keyCode]=false;};
+  noLoop();
 }
 
 function restart() {

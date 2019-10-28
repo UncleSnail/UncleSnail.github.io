@@ -517,6 +517,7 @@ function setup(){
       gameState = "menu";
   }
   loadBlocks(blocks,levels[curLevel]);
+  noLoop();
 }
 
 //draw menus

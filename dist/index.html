@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-us">
 <!-- Created by Caleb Marcoux (Uncle Snail) -->
 <!-- I solute you, my fellow programmer. -->
@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Caleb Marcoux</title>
-  <link type="text/css" rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
   <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -69,10 +69,9 @@
         </a>
         <div class="horizontal">
           <pre class="prettyprint linenums"><code class="language-javascript code" data-src="js/balloon_popper.js"></code></pre>
-          <div class="app-wrapper" id="balloon-popper-app">
-            <!--balloon popper app-->
-          </div>
-          <!--<script src="js/balloon_popper.js"></script>-->
+          <iframe src="embedded_html/balloon_popper.html" frameborder="0" class="app-wrapper" id="balloon-popper-app">
+            <img src="images/balloon_popper_small_300_300.png" alt="Screenshot of Balloon Popper.">
+          </iframe>
         </div>
       </div>
       <div class="carousel-page" id="shepherd">
@@ -81,10 +80,9 @@
         </a>
         <div class="horizontal">
           <pre class="prettyprint linenums"><code class="language-javascript code" data-src="js/shepherd.js"></code></pre>
-          <div class="app-wrapper" id="shepherd-app">
+          <iframe src="embedded_html/shepherd.html" frameborder="0" class="app-wrapper" id="shepherd-app">
             <img src="images/shepherd_small_300_300.png" alt="Screenshot of Shepherd The Game.">
-          </div>
-          <!--<script src="js/shepherd.js"></script>-->
+          </iframe>
         </div>
       </div>
       <div class="carousel-page" id="planet-explorer">
@@ -93,9 +91,9 @@
         </a>
         <div class="horizontal">
           <pre class="prettyprint linenums"><code class="language-javascript code" data-src="js/planet_explorer.js"></code></pre>
-          <div class="app-wrapper" id="planet-explorer-app">
-            <!--<img src="images/planet_explorer_small_300_300.png" alt="Screenshot of the planet explorer.">-->
-          </div>
+          <iframe src="embedded_html/planet_explorer.html" frameborder="0" class="app-wrapper" id="planet-explorer-app">
+            <img src="images/planet_explorer_small_300_300.png" alt="Screenshot of the planet explorer.">
+          </iframe>
           <script src="js/planet_explorer.js"></script>
         </div>
       </div>
@@ -105,10 +103,9 @@
         </a>
         <div class="horizontal">
           <pre class="prettyprint linenums"><code class="language-javascript code" data-src="js/bird_bait.js"></code></pre>
-          <div class="app-wrapper" id="bird-bait-app">
+          <iframe src="embedded_html/bird_bait.html" frameborder="0" class="app-wrapper" id="bird-bait-app">
             <img src="images/bird_bait_small_300_300.png" alt="Screenshot of Bird Bait The Game.">
-          </div>
-          <!--<script src="js/bird_bait.js"></script>-->
+          </iframe>
         </div>
       </div>
     </div>
@@ -131,7 +128,6 @@
     </div>
   </section>
 
-  <!--
   <section class="dark">
     <svg height="200" width="300" id="wind-container">
     </svg>
@@ -176,6 +172,5 @@
       </div>
     </div>
   </footer>
-  -->
 </body>
 </html>
