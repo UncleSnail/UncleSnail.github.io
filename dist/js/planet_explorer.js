@@ -563,6 +563,7 @@ function displayPlanet(planet) {
     fill (255, 255, 255);
     textAlign(LEFT, TOP);
     textSize(25);
+    noStroke();
     text (planet.name, 60, 260);
     textSize(15);
 
@@ -583,6 +584,7 @@ function displayPlanet(planet) {
     "\nSize: " + planet.size + "km" +
     "\nValuable mineral: " + planet.mineral;
     text (infoTextRight, width-60, 360);
+    stroke(170, 155, 176);
 
     image (planet.mineralImage, width-150, height-100);
 
