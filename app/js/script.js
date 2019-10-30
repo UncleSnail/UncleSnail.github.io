@@ -1,9 +1,7 @@
 /*
-Created by Caleb Marcoux (Uncle Snail)
-I solute you, my fellow programmer.
+  Created by Caleb Marcoux (Uncle Snail)
+  I solute you, my fellow programmer.
 */
-
-//<script src="https://www.khanacademy.org/computer-programming/bird-bait-16/4568063333629952/embed.js?editor=yes&buttons=yes&author=yes&embed=yes&width=400px&height=400px"></script>
 
 $(document).ready(function(){
   $('.carousel-pages').slick({

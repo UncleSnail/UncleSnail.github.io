@@ -21,13 +21,6 @@
   }
 }
 
-@mixin wave-image ($path, $width, $height) {
-  background-image: url($path);
-  background-size: $width $height;
-  height: $height;
-  top: (-$height);
-}
-
 @mixin add-font ($name) {
   @if $name == unclesnail {
     font-family: 'unclesnail', sans-serif;

@@ -36,47 +36,6 @@ section {
   height: 400px;
 }
 
-%wave {
-  position: relative;
-  &::before {
-    @include wave-image('images/wave_large_light.png', 1700px, 130px);
-    background-position: left bottom;
-    background-repeat: no-repeat;
-    content: '';
-    display: block;
-    position: absolute;
-    width: 100%;
-  }
-}
-
-.wave-light {
-  @extend %wave;
-  &::before {
-    @include wave-image('images/wave_large_light.png', 1700px, 130px);
-    @include respond-to(small) {
-      @include wave-image('images/wave_small_light.png', 480px, 129px);
-      background-position: center bottom;
-    }
-    @include respond-to(medium) {
-      @include wave-image('images/wave_medium_light.png', 821px, 83px);
-    }
-  }
-}
-
-.wave-dark {
-  @extend %wave;
-  &::before {
-    @include wave-image('images/wave_large_dark.png', 1700px, 130px);
-    @include respond-to(small) {
-      @include wave-image('images/wave_small_dark.png', 480px, 129px);
-      background-position: center bottom;
-    }
-    @include respond-to(medium) {
-      @include wave-image('images/wave_medium_dark.png', 821px, 83px);
-    }
-  }
-}
-
 .columns {
   align-items: center;
   display: flex;
