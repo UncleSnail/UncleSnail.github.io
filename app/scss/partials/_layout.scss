@@ -36,34 +36,6 @@ section {
   height: 400px;
 }
 
-.columns {
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  &.right {
-    justify-content: flex-end;
-    div {
-      display: block;
-      width: 50%;
-    }
-  }
-  @include respond-to(small) {
-    flex-direction: column;
-    &.right {
-      justify-content: flex-start;
-      div {
-        display: block;
-        width: 100%;
-        //Temporary fix for white top.
-        h1 {
-          margin-top: 0;
-          padding-top: 10px;
-        }
-      }
-    }
-  }
-}
-
 .fill {
   height: inherit;
 }
@@ -81,6 +53,21 @@ section {
     div {
       flex: auto;
     }
+  }
+}
+
+.spacer {
+  width: 200px;
+  height: 100px;
+  padding: 0;
+  margin: 0;
+  @include respond-to (small) {
+      width: 75px;
+      height: 75px;
+  }
+  @include respond-to (medium) {
+      width: 100px;
+      height: 75px;
   }
 }
 
