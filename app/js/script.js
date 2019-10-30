@@ -9,18 +9,10 @@ $(document).ready(function(){
     accessibility: false,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: false,
     fade: true,
-    asNavFor: '.carousel-nav',
-    adaptiveHeight: true
-  });
-  $('.carousel-nav').slick({
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    asNavFor: '.carousel-pages',
+    arrows: false,
     dots: true,
-    centerMode: true,
-    focusOnSelect: true
+    adaptiveHeight: true
   });
   $('.code').each(function() {
     var file = $(this).attr("data-src");
@@ -45,13 +37,9 @@ $(document).ready(function(){
 
 $(window).on("load", function() {
   // Use -1 because the first slide is not an app wrapper.
-  $('.carousel-nav').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-    if (currentSlide != 0) {
-      window.frames[currentSlide-1].noLoop();
-    }
-    if (nextSlide != 0) {
-      window.frames[nextSlide-1].loop();
-    }
+  $('.carousel-pages').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    window.frames[currentSlide].noLoop();
+    window.frames[nextSlide].loop();
     console.log(currentSlide);
     console.log(nextSlide);
   });
