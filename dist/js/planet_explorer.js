@@ -588,30 +588,38 @@ function displayPlanet(planet) {
 
     image (planet.mineralImage, width-150, height-100);
 
+    scale(600/400);
+    translate(-100,-200);
+    stroke(170, 155, 176);
     fill (20, 29, 56);
     rect (width/2-50, height-75, 100, 50);
     fill (181, 181, 181);
     textAlign (CENTER, CENTER);
     textSize (20);
+    noStroke();
     text ("Close", width/2, height-50);
 
+    stroke(170, 155, 176);
     fill (20, 29, 56);
     rect (width/2+55, height-75, 50, 50);
     fill (181, 181, 181);
     textAlign (CENTER, CENTER);
     textSize (20);
+    noStroke();
     text (">", width/2+80, height-50);
 
+    stroke(170, 155, 176);
     fill (20, 29, 56);
     rect (width/2-105, height-75, 50, 50);
     fill (181, 181, 181);
     textAlign (CENTER, CENTER);
     textSize (20);
+    noStroke();
     text ("<", width/2-80, height-50);
 };
 
 function mouseClicked() {
-
+    resizeCanvas(400, 400);
     if (selectedPlanet === "none") {
         selectedPlanet = 0;
     }
@@ -634,10 +642,12 @@ function mouseClicked() {
             selectedPlanet = planets.length - 1;
         }
     }
+    resizeCanvas(600, 600);
 };
 
 function draw() {
     background(5, 21, 36);
+    scale(400/600);
 
     /*if (galaxyImage === "none") {
         var galaxyBuffer = createGraphics(width,height);
