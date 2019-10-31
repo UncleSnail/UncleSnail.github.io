@@ -29,6 +29,11 @@ section, footer {
   }
 }
 
+#planet-explorer-app {
+  width: 600px;
+  height: 600px;
+}
+
 //Other classes
 
 .app-wrapper {
@@ -85,6 +90,7 @@ section, footer {
 }
 
 .carousel-pages {
+  display: inline-block;
   max-width: 1100px;
   padding: 10px;
   margin: auto;

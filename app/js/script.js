@@ -36,10 +36,14 @@ $(document).ready(function(){
 
 $(window).on("load", function() {
   // Use -1 because the first slide is not an app wrapper.
-  $('.carousel-pages').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+  $('.carousel-pages').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
     window.frames[currentSlide].noLoop();
     window.frames[nextSlide].loop();
     console.log(currentSlide);
     console.log(nextSlide);
+  });
+  $('.carousel-pages .carousel-page:first-child').mouseenter(function() {
+    window.frames[0].loop();
+    console.log("mouseover");
   });
 });
