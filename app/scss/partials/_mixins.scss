@@ -42,7 +42,7 @@
       font-size: $text-size-tiny-l;
     };
     @include respond-to(giant) {
-      font-size: $text-size-tiny-s;
+      font-size: $text-size-tiny-g;
     };
   }
   @else if $size == small {
@@ -56,7 +56,7 @@
       font-size: $text-size-small-l;
     };
     @include respond-to(giant) {
-      font-size: $text-size-small-s;
+      font-size: $text-size-small-g;
     };
   }
   @else if $size == normal {
@@ -70,7 +70,7 @@
       font-size: $text-size-normal-l;
     };
     @include respond-to(giant) {
-      font-size: $text-size-normal-s;
+      font-size: $text-size-normal-g;
     };
   }
   @else if $size == large {
@@ -84,7 +84,7 @@
       font-size: $text-size-large-l;
     };
     @include respond-to(giant) {
-      font-size: $text-size-large-s;
+      font-size: $text-size-large-g;
     };
   }
   @else if $size == giant {
@@ -98,7 +98,7 @@
       font-size: $text-size-giant-l;
     };
     @include respond-to(giant) {
-      font-size: $text-size-giant-s;
+      font-size: $text-size-giant-g;
     };
   }
 }

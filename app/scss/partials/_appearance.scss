@@ -115,9 +115,21 @@
 }
 
 .testimonials {
-  @include font-size(small);
-  min-height: 300px;
+  @include font-size(normal);
+  padding: 30px 50px;
+  @include respond-to(small) {
+    @include font-size(small);
+    padding: 10px 10px;
+  };
+  @include respond-to(medium) {
+    @include font-size(small);
+    padding: 20px 10px;
+  };
   * {
     flex-basis: auto;
   }
+}
+
+.slick-prev::before, .slick-next::before {
+  color: $light-highlight-color !important;
 }
