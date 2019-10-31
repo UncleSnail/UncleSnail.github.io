@@ -1,7 +1,7 @@
 // Ported by Caleb Marcoux from my original program on Khan Academy.
 // https://www.khanacademy.org/computer-programming/planet-explorer/5870857777250304
+// The original resolution was 600 x 600, so some elements may not display correctly.
 // To preserve authenticity, as little code as possible was changed.
-
 
 /**Galaxy retention variables**/
 //Create an array of hashes for storing the planet data.
