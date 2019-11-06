@@ -586,7 +586,7 @@ function displayPlanet(planet) {
     text (infoTextRight, width-60, 360);
     stroke(170, 155, 176);
 
-    image (planet.mineralImage, width-150, height-100);
+    image (planet.mineralImage, width-100, height-100);
 
     scale(600/400);
     translate(-100,-200);
