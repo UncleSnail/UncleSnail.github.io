@@ -12,6 +12,7 @@ const rename = require('gulp-rename');
 const coffee = require('gulp-coffee');
 const babel = require('gulp-babel');
 const clean_css = require('gulp-clean-css');
+const filter = require('gulp-filter');
 
 function watchAll() {
   //Run browser-sync and sass when task starts,
@@ -26,6 +27,7 @@ function watchAll() {
 function html() {
   return src('app/html/*.html')
     .pipe(changed('dist'))
+    .pipe(filter(['**/*.html', '!**/index_dev.html']))//Filter so that dev html files are not used. Remove this later if other html files are added.
     .pipe(dest('dist/'));
 }
 
