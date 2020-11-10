@@ -3,7 +3,8 @@ const gulp_sass = require('gulp-sass');
 const browserSync = require('browser-sync').create();
 const imagemin = require('gulp-imagemin');
 const plumber = require('gulp-plumber'); // Plumber is used to keep the build running even if there is an error.
-const autoprefixer = require('gulp-autoprefixer');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
 const changed = require('gulp-changed');
 const uglifyes = require('uglify-es'); // Needed for ES6 support instead of the default module.
 const composer = require('gulp-uglify/composer'); // Compose uglify with uglify-es
@@ -36,9 +37,7 @@ function sass() {
   return src('app/scss/*.+(scss|sass)')
     .pipe(plumber())
     .pipe(gulp_sass())
-    .pipe(autoprefixer({
-      browsers: ['last 5 versions']
-    }))
+    .pipe(postcss([autoprefixer()]))
     .pipe(dest('app/pretty_transpiled/css'))
     .pipe(clean_css())
     .pipe(dest('dist/'))
