@@ -63,7 +63,21 @@ function backdrop() {
     }
 };
 
+function pausedOverlay() {
+    fill(255,255,255,100);
+    noStroke();
+    rect(0,0,400,400);
+    fill(255,255,255);
+    rect(180,180,40,40,6);
+    stroke(199, 199, 199);
+    strokeWeight(6);
+    line(195,193,195,207);
+    line(205,193,205,207);
+    strokeWeight(1);
+}
+
 function mousePressed() {
+    loop();
     for (var i = 0; i < balloons.length; i++) {
         var N = map (noise(frameCount/500+balloons[i].y/500),0,1,-100,100);
         if (dist(mouseX,mouseY,balloons[i].x+N,balloons[i].y+s/1.5)<s/2.5){
@@ -79,6 +93,10 @@ function mousePressed() {
             popCount+=1;
         }
     }
+};
+
+function mouseMoved() {
+    loop();
 };
 
 function draw() {
@@ -146,5 +164,8 @@ function draw() {
         text ("This text will\ndissappear automatically.\nThere is not really a point to this\ngame (yet), just have fun.",200,275);
         textAlign(LEFT,BASELINE);
         textSize(12);
+    }
+    if (frameCount<2) {
+        pausedOverlay();
     }
 };
