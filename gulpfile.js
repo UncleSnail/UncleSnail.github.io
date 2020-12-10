@@ -84,7 +84,6 @@ function fonts() {
 
 function browser_sync() {
   browserSync.init({
-    browser: 'C:/Program Files/Firefox Developer Edition/firefox.exe',
     server: {
         baseDir: 'dist'
     }
