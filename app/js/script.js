@@ -3,7 +3,7 @@
   I solute you, my fellow programmer.
 */
 
-$(document).ready(function(){
+$(function(){
   $('.carousel-pages').slick({
     // Prevent key stealing from P5.JS
     accessibility: false,
