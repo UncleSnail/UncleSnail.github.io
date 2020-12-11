@@ -53,6 +53,7 @@ h2 {
 h3 {
   @extend %h;
   @include font-size(normal);
+  padding: 0;
 }
 
 p {
