@@ -24,6 +24,7 @@ body {
   @include font-size(small);
   margin: 0;
   text-align: center;
+  overflow-x: hidden;
 }
 
 header {
@@ -98,7 +99,19 @@ footer {
 
 pre {
   text-align: left;
-  width: 700px;
-  height: 400px;
-  overflow: scroll;
+  &.prettyprint {
+    width: 700px;
+    height: 400px;
+    overflow: scroll;
+    @include respond-to (small) {
+      width: 400px;
+      position: absolute;
+      visibility: hidden;
+    }
+    @include respond-to (medium) {
+      width: 400px;
+      position: absolute;
+      visibility: hidden;
+    }
+  }
 }

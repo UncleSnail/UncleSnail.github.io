@@ -25,9 +25,11 @@
   width: auto;
   border-radius: 10px;
   background-color: $button-color;
+  color: $button-text-color !important;
   padding: 10px;
   margin: 15px;
   justify-content: space-around;
+  cursor: pointer;
   &:link,
   &:visited,
   &:hover,
@@ -58,11 +60,11 @@
     color: $light-h3-color;
   }
   a {
-    color: $light-highlight-color !important;
+    color: $light-highlight-color;
     &:hover,
     &:focus,
     &:active {
-      color: $light-hover-color !important;
+      color: $light-hover-color;
     }
   }
   p {
@@ -100,11 +102,11 @@
     color: $dark-h3-color;
   }
   a {
-    color: $dark-highlight-color !important;
+    color: $dark-highlight-color;
     &:hover,
     &:focus,
     &:active {
-      color: $dark-hover-color !important;
+      color: $dark-hover-color;
     }
   }
 
