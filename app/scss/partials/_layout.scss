@@ -45,6 +45,14 @@ section, footer {
   width: 400px;
   height: 400px;
   margin: 16px 0px;
+  @include respond-to (large) {
+    position: static;
+    visibility: visible;
+  }
+  @include respond-to (giant) {
+    position: static;
+    visibility: visible;
+  }
 }
 
 .fill {
