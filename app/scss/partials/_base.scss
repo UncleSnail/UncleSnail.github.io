@@ -54,7 +54,13 @@ h2 {
 h3 {
   @extend %h;
   @include font-size(normal);
-  padding: 0;
+  padding: 5px;
+}
+
+h4 {
+  @extend %h;
+  @include font-size(small);
+  padding: 2px;
 }
 
 p {
@@ -107,19 +113,23 @@ pre {
       width: 400px;
       position: absolute;
       visibility: hidden;
+      overflow-x: hidden;
     }
     @include respond-to (medium) {
       width: 400px;
       position: absolute;
       visibility: hidden;
+      overflow-x: scroll;
     }
     @include respond-to (large) {
       position: static;
       visibility: visible;
+      overflow-x: scroll;
     }
     @include respond-to (giant) {
       position: static;
       visibility: visible;
+      overflow-x: scroll;
     }
   }
 }
