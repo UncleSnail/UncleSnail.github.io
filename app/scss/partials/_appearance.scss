@@ -138,6 +138,16 @@
   }
 }
 
+.work-descriptions {
+  padding: 0 150px;
+  @include respond-to(small) {
+    padding: 0;
+  }
+  @include respond-to(medium) {
+    padding: 0 50px;
+  }
+}
+
 .testimonials {
   @include font-size(normal);
   padding: 30px 50px;
