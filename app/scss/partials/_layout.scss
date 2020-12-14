@@ -22,18 +22,37 @@
 section, footer {
   padding: 50px 0 !important;
   @include respond-to(small) {
-    padding: 15px 0 !important;
+    padding: 15px 30px !important;
   }
   @include respond-to(medium) {
-    padding: 23px 0 !important;
+    padding: 23px 30px !important;
   }
 }
 
 //Other classes
 
+.hidden {
+  position: absolute;
+  visibility: hidden;
+}
+
+.shown {
+  position: static !important;
+  visibility: visible !important;
+}
+
 .app-wrapper {
   width: 400px;
   height: 400px;
+  margin: 16px 0px;
+  @include respond-to (large) {
+    position: static;
+    visibility: visible;
+  }
+  @include respond-to (giant) {
+    position: static;
+    visibility: visible;
+  }
 }
 
 .fill {
@@ -41,17 +60,23 @@ section, footer {
 }
 
 .horizontal {
-  display: -webkit-flex;
-  display: -ms-flex;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   align-content: center;
   @include respond-to (small) {
-    flex-direction: column;
+    flex-direction: column-reverse;
     div {
       flex: auto;
+    }
+  }
+  &.project {
+    @include respond-to (medium) {
+      flex-direction: column-reverse;
+      div {
+        flex: auto;
+      }
     }
   }
 }
@@ -62,11 +87,11 @@ section, footer {
   padding: 0;
   margin: 0;
   @include respond-to (small) {
-      width: 75px;
-      height: 75px;
+      width: 25px;
+      height: 50px;
   }
   @include respond-to (medium) {
-      width: 100px;
+      width: 50px;
       height: 75px;
   }
 }
@@ -87,6 +112,25 @@ section, footer {
 .carousel-pages {
   display: inline-block;
   max-width: 1100px;
-  padding: 10px;
+  padding: 0 10px;
   margin: auto;
+}
+
+.slick-dots {
+  // Having padding on the carousel-pages offsets the dots, unless left = 0;
+  left: 0;
+}
+
+.mobile-buttons {
+  display: none;
+  @include respond-to(small) {
+    display: block;
+  }
+  @include respond-to(medium) {
+    display: block;
+  }
+  a {
+    margin: 5px;
+    width: 50px;
+  }
 }

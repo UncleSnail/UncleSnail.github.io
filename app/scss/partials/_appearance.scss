@@ -25,9 +25,11 @@
   width: auto;
   border-radius: 10px;
   background-color: $button-color;
+  color: $button-text-color !important;
   padding: 10px;
   margin: 15px;
   justify-content: space-around;
+  cursor: pointer;
   &:link,
   &:visited,
   &:hover,
@@ -57,13 +59,19 @@
   h3 {
     color: $light-h3-color;
   }
+  h4 {
+    color: $light-h4-color;
+  }
   a {
     color: $light-highlight-color;
     &:hover,
     &:focus,
-    &:active, {
+    &:active {
       color: $light-hover-color;
     }
+  }
+  p {
+    color: $light-text-color;
   }
 
   //Decorate
@@ -78,6 +86,11 @@
   .highlight {
     color: $light-highlight-color;
   }
+
+  //Special
+  .slick-prev::before, .slick-next::before {
+    color: $light-highlight-color !important;
+  }
 }
 
 .dark {
@@ -91,11 +104,14 @@
   h3 {
     color: $dark-h3-color;
   }
+  h4 {
+    color: $dark-h4-color;
+  }
   a {
     color: $dark-highlight-color;
     &:hover,
     &:focus,
-    &:active, {
+    &:active {
       color: $dark-hover-color;
     }
   }
@@ -111,6 +127,24 @@
 
   .highlight {
     color: $dark-highlight-color;
+  }
+
+  //Special
+  .slick-prev::before, .slick-next::before {
+    color: white !important;
+  }
+  .slick-dots li.slick-active button::before,li button::before {
+    color: white !important;
+  }
+}
+
+.work-descriptions {
+  padding: 0 150px;
+  @include respond-to(small) {
+    padding: 0;
+  }
+  @include respond-to(medium) {
+    padding: 0 50px;
   }
 }
 
@@ -128,10 +162,6 @@
   * {
     flex-basis: auto;
   }
-}
-
-.slick-prev::before, .slick-next::before {
-  color: $light-highlight-color !important;
 }
 
 #archive {

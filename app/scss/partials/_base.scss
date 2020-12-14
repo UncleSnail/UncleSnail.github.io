@@ -24,6 +24,7 @@ body {
   @include font-size(small);
   margin: 0;
   text-align: center;
+  overflow-x: hidden;
 }
 
 header {
@@ -53,6 +54,13 @@ h2 {
 h3 {
   @extend %h;
   @include font-size(normal);
+  padding: 5px;
+}
+
+h4 {
+  @extend %h;
+  @include font-size(small);
+  padding: 2px;
 }
 
 p {
@@ -97,7 +105,31 @@ footer {
 
 pre {
   text-align: left;
-  width: 700px;
-  height: 400px;
-  overflow: scroll;
+  &.prettyprint {
+    max-width: 700px;
+    height: 400px;
+    overflow: scroll;
+    @include respond-to (small) {
+      max-width: 400px;
+      position: absolute;
+      visibility: hidden;
+      overflow-x: hidden;
+    }
+    @include respond-to (medium) {
+      max-width: 400px;
+      position: absolute;
+      visibility: hidden;
+      overflow-x: scroll;
+    }
+    @include respond-to (large) {
+      position: static;
+      visibility: visible;
+      overflow-x: scroll;
+    }
+    @include respond-to (giant) {
+      position: static;
+      visibility: visible;
+      overflow-x: scroll;
+    }
+  }
 }
