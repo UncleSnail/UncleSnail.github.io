@@ -37,7 +37,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2",
     "node-sass": "^7.0.0",
-    "postcss": "^8.2.10",
+    "postcss": "^8.2.13",
     "uglify-es": "^3.3.9"
   }
 }
