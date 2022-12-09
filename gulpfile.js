@@ -1,7 +1,8 @@
 const { src, dest, watch, parallel, series } = require('gulp');
-const gulp_sass = require('gulp-sass');
+const gulp_sass = require('gulp-sass')(require('sass'));
 const browserSync = require('browser-sync').create();
-const imagemin = require('gulp-imagemin');
+// const imagemin = require('gulp-imagemin');
+// import imagemin from 'gulp-imagemin';
 const plumber = require('gulp-plumber'); // Plumber is used to keep the build running even if there is an error.
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
@@ -61,7 +62,7 @@ function js() {
 function images() {
   return src('app/images/**/*.+(png|jpg|gif|PNG)')
     .pipe(changed('dist/images'))
-    .pipe(imagemin())
+    // .pipe(imagemin())
     .pipe(src('app/images/**/*.svg'))
     .pipe(dest('dist/images'));
 }

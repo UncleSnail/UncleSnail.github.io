@@ -36,8 +36,8 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
-    "node-sass": "^7.0.3",
     "postcss": "^8.2.13",
+    "sass": "^1.56.2",
     "uglify-es": "^3.3.9"
   }
 }
