@@ -30,7 +30,7 @@
     "gulp-clean-css": "^4.2.0",
     "gulp-coffee": "^3.0.3",
     "gulp-filter": "^6.0.0",
-    "gulp-imagemin": "^5.0.3",
+    "gulp-imagemin": "^8.0.0",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^9.0.0",
     "gulp-rename": "^1.4.0",
