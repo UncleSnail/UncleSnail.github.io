@@ -56,11 +56,8 @@ $(window).on("load", function() {
   $('#projects .carousel-pages').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
     window.frames[currentSlide].noLoop();
     window.frames[nextSlide].loop();
-    console.log(currentSlide);
-    console.log(nextSlide);
   });
   $('#projects .carousel-pages .carousel-page:first-child').mouseenter(function() {
     window.frames[0].loop();
-    console.log("mouseover");
   });
 });
