@@ -63,6 +63,13 @@ h4 {
   padding: 2px;
 }
 
+h5 {
+  @extend %h;
+  @include font-size(tiny);
+  padding: 2px;
+  color: $dark-highlight-color;
+}
+
 p {
   color: $dark-text-color;
 }

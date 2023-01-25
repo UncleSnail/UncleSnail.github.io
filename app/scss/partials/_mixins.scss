@@ -11,13 +11,13 @@
     @media only screen and (max-width: $breakpoint-small) {@content;}
   }
   @else if $media == medium {
-    @media only screen and (min-width: $breakpoint-small + 1) and (max-width: $breakpoint-medium) {@content;}
+    @media only screen and (min-width: ($breakpoint-small + 1)) and (max-width: $breakpoint-medium) {@content;}
   }
   @else if $media == large {
-    @media only screen and (min-width: $breakpoint-medium + 1) and (max-width: $breakpoint-large) {@content;}
+    @media only screen and (min-width: ($breakpoint-medium + 1)) and (max-width: $breakpoint-large) {@content;}
   }
   @else if $media == giant {
-    @media only screen and (min-width: $breakpoint-large + 1) {@content;}
+    @media only screen and (min-width: ($breakpoint-large + 1)) {@content;}
   }
 }
 
