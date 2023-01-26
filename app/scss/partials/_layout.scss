@@ -118,6 +118,7 @@ section, footer {
     }
     .entry {
       width: 70%;
+      margin-left: -0.25em; // Cancels white space after date
       .title:before {
         content: '•';
         position: absolute;
