@@ -137,6 +137,78 @@ section, footer {
         text-align: left;
       }
     }
+
+    @include respond-to (small) {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      .date,.entry {
+        display: block;
+        width: 100%;
+      }
+      .date {
+        padding-top: 1em;
+        // Place the date
+        padding-left: 0;
+        margin-left: -0.25em; // Cancels white space after date
+        text-align: left;
+        h2 {
+          margin-left: 22px;
+          padding-left: calc($timeline-gap - 20px);
+        }
+        h5 {
+          padding-left: 0.5em;
+        }
+        // Add date dot
+        h2:before {
+          content: '•';
+          position: absolute;
+          margin-left: calc(19px - calc(0.18em + $timeline-gap));
+          color: $button-color;
+        }
+        // Remove title dot
+        * {
+          text-align: left;
+          display: inline-block;
+        }
+      }
+      .entry {
+        margin-left: -0.25em; // Cancels white space after date
+        .title:before {
+          content: '';
+        }
+        .title {
+          margin-left: 20px;
+          padding-left: calc($timeline-gap - 20px);
+          border-left: solid 2px $button-color;
+        }
+        .content {
+          margin-left: 20px;
+          padding-left: calc($timeline-gap - 20px);
+        }
+      }
+    }
+    @include respond-to (medium) {
+      text-align: right;
+      padding-right: 5%;
+      .date {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+        width: fit-content;
+      }
+      .entry {
+        width: 80%;
+        .title:before {
+          margin-left: calc(21px - calc(0.18em + $timeline-gap));
+        }
+        .title, .content {
+          margin-left: 20px;
+          padding-left: calc($timeline-gap - 20px);
+        }
+      }
+    }
   }
 }
 
