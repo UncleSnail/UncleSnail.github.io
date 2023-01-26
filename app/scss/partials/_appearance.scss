@@ -68,6 +68,7 @@
     &:focus,
     &:active {
       color: $light-hover-color;
+      text-decoration-color: $light-hover-color;
     }
   }
   p {
@@ -113,6 +114,7 @@
     &:focus,
     &:active {
       color: $dark-hover-color;
+      text-decoration-color: $dark-hover-color;
     }
   }
 

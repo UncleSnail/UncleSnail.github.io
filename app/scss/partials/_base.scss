@@ -76,6 +76,8 @@ p {
 
 a {
   color: $dark-text-color;
+  text-underline-offset: 0em;
+  transition: all $transition-duration ease;
   &:link,
   &:visited,
   &:hover,
@@ -84,6 +86,13 @@ a {
     color: $dark-hover-color;
     outline: 0;
     text-decoration: none;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    text-decoration-thickness: 0.1em;
   }
 }
 
@@ -114,7 +123,7 @@ pre {
   text-align: left;
   &.prettyprint {
     max-width: 700px;
-    height: 400px;
+    height: 394px;
     overflow: scroll;
     @include respond-to (small) {
       max-width: 400px;
