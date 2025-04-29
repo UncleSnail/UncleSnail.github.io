@@ -53,11 +53,11 @@ $(function(){
 });
 
 $(window).on("load", function() {
-  $('#projects .carousel-pages').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
-    window.frames[currentSlide].noLoop();
-    window.frames[nextSlide].loop();
+  $('#projects .carousel-pages').on('beforeChange', function(_event, _slick, currentSlide, nextSlide) {
+    window.frames[currentSlide]?.noLoop();
+    window.frames[nextSlide]?.loop();
   });
   $('#projects .carousel-pages .carousel-page:first-child').mouseenter(function() {
-    window.frames[0].loop();
+    window.frames[0]?.loop();
   });
 });
