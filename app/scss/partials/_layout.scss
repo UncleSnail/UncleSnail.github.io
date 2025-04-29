@@ -81,6 +81,33 @@ section, footer {
   }
 }
 
+.project {
+  min-height: 400px;
+}
+
+.large {
+    max-width: 700px;
+    @include respond-to (small) {
+      max-width: 400px;
+    }
+    @include respond-to (medium) {
+      max-width: 400px;
+    }
+}
+
+.small {
+    max-width: 400px;
+    max-height: 400px;
+    @include respond-to (small) {
+      max-width: 200px;
+      max-height: 200px;
+    }
+    @include respond-to (medium) {
+      max-width: 200px;
+      max-height: 200px;
+    }
+}
+
 .spacer {
   width: 200px;
   height: 100px;
